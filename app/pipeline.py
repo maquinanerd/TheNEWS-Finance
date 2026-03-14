@@ -534,7 +534,7 @@ def process_batch(articles: List[Dict[str, Any]], link_map: Dict[str, Any]):
                         content_html += f"\n{credit_line}"
 
                         # Process categories
-                        final_category_ids = {WORDPRESS_CATEGORIES['Notícias']}  # Default
+                        final_category_ids = {WORDPRESS_CATEGORIES['News & Analysis']}  # Default
                         if source_specific_names := SOURCE_CATEGORY_MAP.get(art_data['source_id']):
                             for name in source_specific_names:
                                 if cat_id := WORDPRESS_CATEGORIES.get(name):
