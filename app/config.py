@@ -113,21 +113,21 @@ PILAR_POSTS: List[str] = [
 # IDs das categorias no WordPress
 # Verificar em: WP Admin → Posts → Categories (ID na URL ao editar)
 WORDPRESS_CATEGORIES: Dict[str, int] = {
-    'Personal Finance':        10,  # ← substituir pelo ID real após criar no WP
-    'Credit Cards':            11,
-    'Banking':                 12,
-    'Investing':               13,
-    'News & Analysis':         14,
-    'Loans & Mortgages':       15,
-    'Retirement':              16,
-    'Taxes':                   17,
-    'Insurance':               18,
-    'Crypto & Digital Assets': 19,
-    'Economy & Macro':         20,
-    'Markets & Trading':       21,
-    'Financial Planning':      22,
-    'Fintech & Innovation':    23,
-    'Small Business Finance':  24,
+    'Personal Finance':        132,
+    'Credit Cards':            133,
+    'Banking':                 134,
+    'Investing':               135,
+    'News & Analysis':         136,
+    'Loans & Mortgages':       137,
+    'Retirement':              138,
+    'Taxes':                   139,
+    'Insurance':               140,
+    'Crypto & Digital Assets': 141,
+    'Economy & Macro':         142,
+    'Markets & Trading':       143,
+    'Financial Planning':      144,
+    'Fintech & Innovation':    145,
+    'Small Business Finance':  146,
 }
 
 # Mapeia o source_id para uma lista de nomes de categorias
