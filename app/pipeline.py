@@ -1,5 +1,6 @@
 # app/pipeline.py
 import logging
+import itertools
 import time
 import json
 import re
@@ -18,6 +19,7 @@ from .config import (
     PIPELINE_CONFIG,
     SOURCE_CATEGORY_MAP,
     AI_API_KEYS,
+    AUTHOR_ROTATION,
 )
 from .store import Database
 from .feeds import FeedReader
@@ -48,6 +50,9 @@ from bs4 import BeautifulSoup
 from .cleaners import clean_html_for_globo_esporte
 
 logger = logging.getLogger(__name__)
+
+# Round-robin rotation: Sarah Mitchell ↔ James Carter
+_author_cycle = itertools.cycle(AUTHOR_ROTATION)
 
 # --- Global instances ---
 article_queue = ArticleQueue()
@@ -605,6 +610,7 @@ def process_batch(articles: List[Dict[str, Any]], link_map: Dict[str, Any]):
                             'tags': rewritten_data.get('tags_sugeridas', []),
                             'featured_media': featured_media_id,
                             'meta': yoast_meta,
+                            'author': next(_author_cycle)['id'],
                         }
 
                         wp_post_id = wp_client.create_post(post_payload)

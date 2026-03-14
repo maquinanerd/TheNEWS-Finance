@@ -153,6 +153,12 @@ PILAR_POSTS: List[str] = [
     'https://www.thefinance.news/personal-finance/credit-score-explained/',
 ]
 
+# --- Rodízio de Autores ---
+AUTHOR_ROTATION: List[Dict[str, Any]] = [
+    {'id': int(os.getenv('WORDPRESS_ID_2', 3)), 'name': os.getenv('WORDPRESS_USER_2', 'sarahmitchell')},
+    {'id': int(os.getenv('WORDPRESS_ID_3', 4)), 'name': os.getenv('WORDPRESS_USER_3', 'jamescarter')},
+]
+
 # IDs das categorias no WordPress
 # Verificar em: WP Admin → Posts → Categories (ID na URL ao editar)
 WORDPRESS_CATEGORIES: Dict[str, int] = {
