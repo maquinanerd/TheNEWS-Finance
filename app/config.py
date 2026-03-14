@@ -37,7 +37,7 @@ RSS_FEEDS: Dict[str, Dict[str, Any]] = {
     # ── MarketWatch ──────────────────────────────────────────────
     'marketwatch_top':      {'urls': ['http://feeds.marketwatch.com/marketwatch/topstories'],                                   'category': 'Markets & Trading',         'source_name': 'MarketWatch'},
     'marketwatch_realtime': {'urls': ['http://feeds.marketwatch.com/marketwatch/realtimeheadlines'],                           'category': 'News & Analysis',           'source_name': 'MarketWatch'},
-    'marketwatch_pf':       {'urls': ['http://feeds.marketwatch.com/marketwatch/pf'],                                          'category': 'Personal Finance',          'source_name': 'MarketWatch'},
+    'marketwatch_pf':       {'urls': ['https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml'],                                     'category': 'Economy & Macro',           'source_name': 'The Wall Street Journal'},
     # ── Nasdaq ───────────────────────────────────────────────────
     'nasdaq_markets':       {'urls': ['https://www.nasdaq.com/feed/rssoutbound?category=Markets'],                             'category': 'Markets & Trading',         'source_name': 'Nasdaq'},
     'nasdaq_earnings':      {'urls': ['https://www.nasdaq.com/feed/rssoutbound?category=Earnings'],                            'category': 'Markets & Trading',         'source_name': 'Nasdaq'},
@@ -51,27 +51,27 @@ RSS_FEEDS: Dict[str, Dict[str, Any]] = {
     # ── Seeking Alpha ────────────────────────────────────────────
     'seeking_alpha':        {'urls': ['https://seekingalpha.com/feed.xml'],                                                    'category': 'Investing',                 'source_name': 'Seeking Alpha'},
     # ── Motley Fool ──────────────────────────────────────────────
-    'motley_fool':          {'urls': ['https://www.fool.com/a/feeds/partner/google/'],                                         'category': 'Investing',                 'source_name': 'The Motley Fool'},
+    'motley_fool':          {'urls': ['https://www.fool.com/feeds/index.aspx'],                                                'category': 'Investing',                 'source_name': 'The Motley Fool'},
     # ── CoinDesk + Cointelegraph ─────────────────────────────────
     'coindesk':             {'urls': ['https://www.coindesk.com/arc/outboundfeeds/rss/'],                                      'category': 'Crypto & Digital Assets',   'source_name': 'CoinDesk'},
     'cointelegraph':        {'urls': ['https://cointelegraph.com/rss'],                                                        'category': 'Crypto & Digital Assets',   'source_name': 'Cointelegraph'},
     'cointelegraph_bitcoin':{'urls': ['https://cointelegraph.com/rss/tag/bitcoin'],                                            'category': 'Crypto & Digital Assets',   'source_name': 'Cointelegraph'},
-    # ── US News Money ────────────────────────────────────────────
-    'usnews_money':         {'urls': ['https://www.usnews.com/rss/money'],                                                     'category': 'Personal Finance',          'source_name': 'US News'},
-    # ── Investopedia ─────────────────────────────────────────────
-    'investopedia':         {'urls': ['https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline'],          'category': 'Investing',                 'source_name': 'Investopedia'},
+    # ── US News Money → Fox Business ───────────────────────────────────
+    'usnews_money':         {'urls': ['https://feeds.foxbusiness.com/foxbusiness/latest'],                                     'category': 'News & Analysis',           'source_name': 'Fox Business'},
+    # ── Investopedia → Business Insider Markets ───────────────────────────
+    'investopedia':         {'urls': ['https://markets.businessinsider.com/rss/news'],                                         'category': 'Markets & Trading',         'source_name': 'Business Insider Markets'},
     # ── CBS MoneyWatch ───────────────────────────────────────────
     'cbsn_moneywatch':      {'urls': ['https://www.cbsnews.com/latest/rss/moneywatch'],                                        'category': 'News & Analysis',           'source_name': 'CBS MoneyWatch'},
-    # ── Forbes ───────────────────────────────────────────────────
-    'forbes':               {'urls': ['https://www.forbes.com/feed/'],                                                         'category': 'News & Analysis',           'source_name': 'Forbes'},
+    # ── Forbes → CNBC Real Estate ───────────────────────────────────────
+    'forbes':               {'urls': ['https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000739'], 'category': 'Real Estate',               'source_name': 'CNBC'},
     # ── The Economist ────────────────────────────────────────────
     'economist':            {'urls': ['https://www.economist.com/finance-and-economics/rss.xml'],                              'category': 'Economy & Macro',           'source_name': 'The Economist'},
     # ── Financial Times ──────────────────────────────────────────
     'ft':                   {'urls': ['https://www.ft.com/rss/home'],                                                          'category': 'Economy & Macro',           'source_name': 'Financial Times'},
     # ── Politico Economy ─────────────────────────────────────────
     'politico_economy':     {'urls': ['https://rss.politico.com/economy.xml'],                                                 'category': 'Economy & Macro',           'source_name': 'Politico'},
-    # ── Zacks ────────────────────────────────────────────────────
-    'zacks':                {'urls': ['https://www.zacks.com/commentary/rss'],                                                 'category': 'Markets & Trading',         'source_name': 'Zacks'},
+    # ── Zacks → WSJ Markets ────────────────────────────────────────────
+    'zacks':                {'urls': ['https://feeds.a.dj.com/rss/RSSMarketsMain.xml'],                                        'category': 'Markets & Trading',         'source_name': 'The Wall Street Journal'},
     # ── TheStreet ────────────────────────────────────────────────
     'thestreet':            {'urls': ['https://thestreet.com/.rss/full'],                                                      'category': 'Markets & Trading',         'source_name': 'TheStreet'},
     # ── ETF.com ──────────────────────────────────────────────────
@@ -79,7 +79,7 @@ RSS_FEEDS: Dict[str, Dict[str, Any]] = {
     # ── Investor's Business Daily ────────────────────────────────
     'ibd':                  {'urls': ['https://www.investors.com/feed'],                                                       'category': 'Markets & Trading',         'source_name': "Investor's Business Daily"},
     # ── Fortune Finance ──────────────────────────────────────────
-    'fortune':              {'urls': ['https://fortune.com/section/finance/feed'],                                             'category': 'News & Analysis',           'source_name': 'Fortune'},
+    'fortune':              {'urls': ['https://fortune.com/feed/'],                                                            'category': 'News & Analysis',           'source_name': 'Fortune'},
     # ── Financial Samurai ────────────────────────────────────────
     'financial_samurai':    {'urls': ['https://financialsamurai.com/feed'],                                                    'category': 'Personal Finance',          'source_name': 'Financial Samurai'},
 }
@@ -183,7 +183,7 @@ SOURCE_CATEGORY_MAP: Dict[str, List[str]] = {
     # MarketWatch
     'marketwatch_top':      ['Markets & Trading', 'News & Analysis'],
     'marketwatch_realtime': ['News & Analysis'],
-    'marketwatch_pf':       ['Personal Finance'],
+    'marketwatch_pf':       ['Economy & Macro', 'Markets & Trading'],   # WSJ Business
     # Nasdaq
     'nasdaq_markets':       ['Markets & Trading'],
     'nasdaq_earnings':      ['Markets & Trading', 'News & Analysis'],
@@ -197,14 +197,14 @@ SOURCE_CATEGORY_MAP: Dict[str, List[str]] = {
     'coindesk':             ['Crypto & Digital Assets'],
     'cointelegraph':        ['Crypto & Digital Assets'],
     'cointelegraph_bitcoin':['Crypto & Digital Assets'],
-    'usnews_money':         ['Personal Finance'],
-    'investopedia':         ['Investing', 'Personal Finance'],
+    'usnews_money':         ['News & Analysis'],                        # Fox Business
+    'investopedia':         ['Markets & Trading'],                      # Business Insider Markets
     'cbsn_moneywatch':      ['News & Analysis'],
-    'forbes':               ['News & Analysis'],
+    'forbes':               ['Real Estate'],                            # CNBC Real Estate
     'economist':            ['Economy & Macro'],
     'ft':                   ['Economy & Macro'],
     'politico_economy':     ['Economy & Macro'],
-    'zacks':                ['Markets & Trading', 'Investing'],
+    'zacks':                ['Markets & Trading'],                      # WSJ Markets
     'thestreet':            ['Markets & Trading'],
     'etf_com':              ['Investing'],
     'ibd':                  ['Markets & Trading', 'Investing'],
