@@ -10,28 +10,35 @@ logger = logging.getLogger(__name__)
 
 # --- Ordem de processamento dos feeds ---
 PIPELINE_ORDER: List[str] = [
-    'screenrant_movie_lists',
-    'screenrant_movie_news',
-    'screenrant_tv',
+    'cnbc_top', 'yahoo_finance',                                     # 1º: breaking news
+    'cnbc_pf', 'marketwatch_pf', 'kiplinger', 'usnews_money',       # 2º: personal finance (maior RPM)
+    'cnbc_investing', 'seeking_alpha', 'investopedia',               # 3º: investing
+    'nasdaq_markets', 'nasdaq_earnings', 'marketwatch_top',          # 4º: markets
+    'cnbc_economy', 'economist', 'politico_econ',                    # 5º: macro
+    'coindesk', 'cointelegraph',                                     # 6º: crypto
+    'forbes',                                                        # 7º: general
 ]
 
-# --- Feeds RSS (padronizados, sem "synthetic_from") ---
+# --- Feeds RSS ---
 RSS_FEEDS: Dict[str, Dict[str, Any]] = {
-    'screenrant_movie_lists': {
-        'urls': ['https://screenrant.com/feed/movie-lists/'],
-        'category': 'movies',
-        'source_name': 'ScreenRant',
-    },
-    'screenrant_movie_news': {
-        'urls': ['https://screenrant.com/feed/movie-news/'],
-        'category': 'movies',
-        'source_name': 'ScreenRant',
-    },
-    'screenrant_tv': {
-        'urls': ['https://screenrant.com/feed/tv/'],
-        'category': 'tv',
-        'source_name': 'ScreenRant',
-    },
+    'cnbc_top':       {'urls': ['https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'], 'category': 'News & Analysis',          'source_name': 'CNBC'},
+    'cnbc_economy':   {'urls': ['https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258'],  'category': 'Economy & Macro',           'source_name': 'CNBC'},
+    'cnbc_investing': {'urls': ['https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839069'],  'category': 'Investing',                 'source_name': 'CNBC'},
+    'cnbc_pf':        {'urls': ['https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=21324812'],  'category': 'Personal Finance',          'source_name': 'CNBC'},
+    'marketwatch_top':{'urls': ['http://feeds.marketwatch.com/marketwatch/topstories'],                                   'category': 'Markets & Trading',         'source_name': 'MarketWatch'},
+    'marketwatch_pf': {'urls': ['http://feeds.marketwatch.com/marketwatch/pf'],                                           'category': 'Personal Finance',          'source_name': 'MarketWatch'},
+    'yahoo_finance':  {'urls': ['https://finance.yahoo.com/news/rssindex'],                                               'category': 'News & Analysis',           'source_name': 'Yahoo Finance'},
+    'nasdaq_markets': {'urls': ['https://www.nasdaq.com/feed/rssoutbound?category=Markets'],                              'category': 'Markets & Trading',         'source_name': 'Nasdaq'},
+    'nasdaq_earnings':{'urls': ['https://www.nasdaq.com/feed/rssoutbound?category=Earnings'],                             'category': 'Markets & Trading',         'source_name': 'Nasdaq'},
+    'kiplinger':      {'urls': ['https://www.kiplinger.com/feed/all'],                                                    'category': 'Personal Finance',          'source_name': 'Kiplinger'},
+    'investopedia':   {'urls': ['https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_headline'],           'category': 'Investing',                 'source_name': 'Investopedia'},
+    'seeking_alpha':  {'urls': ['https://seekingalpha.com/feed.xml'],                                                     'category': 'Investing',                 'source_name': 'Seeking Alpha'},
+    'coindesk':       {'urls': ['https://www.coindesk.com/arc/outboundfeeds/rss/'],                                       'category': 'Crypto & Digital Assets',   'source_name': 'CoinDesk'},
+    'cointelegraph':  {'urls': ['https://cointelegraph.com/rss'],                                                         'category': 'Crypto & Digital Assets',   'source_name': 'Cointelegraph'},
+    'usnews_money':   {'urls': ['https://www.usnews.com/rss/money'],                                                      'category': 'Personal Finance',          'source_name': 'US News'},
+    'economist':      {'urls': ['https://www.economist.com/finance-and-economics/rss.xml'],                               'category': 'Economy & Macro',           'source_name': 'The Economist'},
+    'politico_econ':  {'urls': ['https://rss.politico.com/economy.xml'],                                                  'category': 'Economy & Macro',           'source_name': 'Politico'},
+    'forbes':         {'urls': ['https://www.forbes.com/feed/'],                                                          'category': 'News & Analysis',           'source_name': 'Forbes'},
 }
 
 # --- HTTP ---
@@ -97,32 +104,82 @@ WORDPRESS_CONFIG = {
 }
 
 # --- Posts Pilares para Linkagem Interna ---
-# Adicione aqui as URLs completas dos seus posts mais importantes.
-# A lógica de linkagem interna dará prioridade máxima a links que apontam para estes artigos.
 PILAR_POSTS: List[str] = [
-    # Ex: "https://seusite.com/guia-completo-de-futebol",
-    # Ex: "https://seusite.com/historia-das-copas-do-mundo",
+    'https://www.thefinance.news/investing/what-is-an-etf-complete-guide/',
+    'https://www.thefinance.news/investing/roth-ira-complete-guide/',
+    'https://www.thefinance.news/personal-finance/credit-score-explained/',
 ]
 
-# IDs das categorias no WordPress (ajuste os IDs conforme o seu WP)
+# IDs das categorias no WordPress
+# Verificar em: WP Admin → Posts → Categories (ID na URL ao editar)
 WORDPRESS_CATEGORIES: Dict[str, int] = {
-    'Notícias': 20,
-    'Filmes': 24,
-    'Séries': 21,  # ID correto de Séries (era 24 antes, mesmo ID de Filmes!)
-    'Games': 73,
+    'Personal Finance':        10,  # ← substituir pelo ID real após criar no WP
+    'Credit Cards':            11,
+    'Banking':                 12,
+    'Investing':               13,
+    'News & Analysis':         14,
+    'Loans & Mortgages':       15,
+    'Retirement':              16,
+    'Taxes':                   17,
+    'Insurance':               18,
+    'Crypto & Digital Assets': 19,
+    'Economy & Macro':         20,
+    'Markets & Trading':       21,
+    'Financial Planning':      22,
+    'Fintech & Innovation':    23,
+    'Small Business Finance':  24,
 }
 
 # Mapeia o source_id para uma lista de nomes de categorias
 SOURCE_CATEGORY_MAP: Dict[str, List[str]] = {
-    'screenrant_movie_lists': ['Filmes'],
-    'screenrant_movie_news': ['Filmes'],
-    'screenrant_tv': ['Séries'],
+    'cnbc_top':       ['News & Analysis'],
+    'cnbc_economy':   ['Economy & Macro', 'News & Analysis'],
+    'cnbc_investing': ['Investing', 'Markets & Trading'],
+    'cnbc_pf':        ['Personal Finance'],
+    'marketwatch_top':['Markets & Trading', 'News & Analysis'],
+    'marketwatch_pf': ['Personal Finance'],
+    'yahoo_finance':  ['News & Analysis'],
+    'nasdaq_markets': ['Markets & Trading'],
+    'nasdaq_earnings':['Markets & Trading', 'News & Analysis'],
+    'kiplinger':      ['Personal Finance', 'Retirement'],
+    'investopedia':   ['Investing', 'Personal Finance'],
+    'seeking_alpha':  ['Investing'],
+    'coindesk':       ['Crypto & Digital Assets'],
+    'cointelegraph':  ['Crypto & Digital Assets'],
+    'usnews_money':   ['Personal Finance'],
+    'economist':      ['Economy & Macro'],
+    'politico_econ':  ['Economy & Macro'],
+    'forbes':         ['News & Analysis'],
 }
 
 
 # --- Sinônimos de Categorias ---
-# Mapeia nomes alternativos (em minúsculas) para o slug canônico em WORDPRESS_CATEGORIES
-CATEGORY_ALIASES: Dict[str, str] = {}
+CATEGORY_ALIASES: Dict[str, str] = {
+    'finance':          'Personal Finance',
+    'personal finance': 'Personal Finance',
+    'investing':        'Investing',
+    'investment':       'Investing',
+    'markets':          'Markets & Trading',
+    'trading':          'Markets & Trading',
+    'economy':          'Economy & Macro',
+    'macro':            'Economy & Macro',
+    'crypto':           'Crypto & Digital Assets',
+    'bitcoin':          'Crypto & Digital Assets',
+    'cryptocurrency':   'Crypto & Digital Assets',
+    'tax':              'Taxes',
+    'taxes':            'Taxes',
+    'retirement':       'Retirement',
+    'fintech':          'Fintech & Innovation',
+    'credit card':      'Credit Cards',
+    'credit cards':     'Credit Cards',
+    'mortgage':         'Loans & Mortgages',
+    'loans':            'Loans & Mortgages',
+    'insurance':        'Insurance',
+    'banking':          'Banking',
+    'small business':   'Small Business Finance',
+    'news':             'News & Analysis',
+    'analysis':         'News & Analysis',
+}
 
 
 # --- Agendador / Pipeline ---
