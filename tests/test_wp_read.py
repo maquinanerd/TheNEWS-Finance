@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Teste de leitura de posts (GET)"""
 import requests
 from requests.auth import HTTPBasicAuth
 
-URL = "https://www.maquinanerd.com.br/wp-json/wp/v2/posts?per_page=1"
+URL = "https://www.thefinance.news/wp-json/wp/v2/posts?per_page=1"
 USER = "Pablo Gameleira"
 PASSWORD = "aXvV GxAV GCMV jBfc ZIT2 5aWe"
 

@@ -1,4 +1,4 @@
-🎯 COMANDOS RÁPIDOS
+﻿🎯 COMANDOS RÁPIDOS
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -79,7 +79,7 @@ Select-String logs/tokens/tokens_2026-02-05.jsonl -Pattern $json.titulo_final
 # Dado tokens, encontrar WordPress ID
 $wp_id = (Get-Content logs/tokens/tokens_2026-02-05.jsonl | ConvertFrom-Json | Where-Object {$_.article_title -like "*olimpicos*"} | Select-Object wp_post_id).wp_post_id
 Write-Host "WordPress ID: $wp_id"
-Write-Host "URL: https://www.maquinanerd.com.br/?p=$wp_id"
+Write-Host "URL: https://www.thefinance.news/?p=$wp_id"
 
 
 ═══════════════════════════════════════════════════════════════════════════════

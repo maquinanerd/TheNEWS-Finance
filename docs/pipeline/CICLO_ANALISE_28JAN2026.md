@@ -1,4 +1,4 @@
-# 📊 Análise Detalhada do Ciclo de Postagem - 28/01/2026
+﻿# 📊 Análise Detalhada do Ciclo de Postagem - 28/01/2026
 
 ## 📋 Resumo Executivo
 
@@ -130,7 +130,7 @@ Taxa de Sucesso = (7.978 / 12.445) × 100 = 64,0%
 
 - **Usuário WordPress:** ✅ **Pablo Gameleira** (corretamente configurado)
 - **Senha WordPress:** ✅ Configurada (mascarada por segurança)
-- **URL WordPress:** ✅ https://www.maquinanerd.com.br/wp-json/wp/v2/
+- **URL WordPress:** ✅ https://www.thefinance.news/wp-json/wp/v2/
 
 ---
 

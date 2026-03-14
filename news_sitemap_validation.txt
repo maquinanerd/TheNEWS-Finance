@@ -2,7 +2,7 @@
 [GOOGLE NEWS SITEMAP VALIDATOR v1.0]
 ====================================================================================================
 
-URL: https://www.maquinanerd.com.br/news-sitemap.xml
+URL: https://www.thefinance.news/news-sitemap.xml
 Data: 2026-02-12 17:07:52
 
 [1/5] ­ƒôÑ Buscando news-sitemap.xml...
@@ -73,19 +73,19 @@ Data: 2026-02-12 17:07:52
 ====================================================================================================
 
 #1: Spider-Noir: Cat Hardy ser o maior interesse amoroso de Pete...
-   URL: https://www.maquinanerd.com.br/spider-noir-cat-hardy-interesse-amoroso/
+   URL: https://www.thefinance.news/spider-noir-cat-hardy-interesse-amoroso/
    Keywords: ÔØî N/A
    Image: ÔØî
    Published: 2026-02-12T20:02:46+00:00
 
 #2: Ryan Murphy: S├®rie &#8220;Love Story&#8221; sobre JFK Jr. es...
-   URL: https://www.maquinanerd.com.br/serie-love-story-jfk-jr-carolyn-bessette-estreia-rotten-tomatoes/
+   URL: https://www.thefinance.news/serie-love-story-jfk-jr-carolyn-bessette-estreia-rotten-tomatoes/
    Keywords: ÔØî N/A
    Image: ÔØî
    Published: 2026-02-12T20:01:11+00:00
 
 #3: 7 Reboots de S├®ries Esquecidos que Falharam em Capturar o Su...
-   URL: https://www.maquinanerd.com.br/reboots-de-series-esquecidos-falharam/
+   URL: https://www.thefinance.news/reboots-de-series-esquecidos-falharam/
    Keywords: ÔØî N/A
    Image: ÔØî
    Published: 2026-02-12T19:58:17+00:00
@@ -100,7 +100,7 @@ Data: 2026-02-12 17:07:52
       ÔåÆ Verificar posts sem imagem destacada
    3. Ô£à Enviar News Sitemap ao Google News Publisher Center
       ÔåÆ https://newscenter.google.com/
-      ÔåÆ Adicionar: https://www.maquinanerd.com.br/news-sitemap.xml
+      ÔåÆ Adicionar: https://www.thefinance.news/news-sitemap.xml
    4. Ô£à Submeter ao Google Search Console
       ÔåÆ https://search.google.com/search-console/
       ÔåÆ Sitemaps ÔåÆ Adicionar: news-sitemap.xml

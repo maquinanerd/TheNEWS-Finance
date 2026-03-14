@@ -1,4 +1,4 @@
-# 🎯 NOVO SISTEMA DE ARMAZENAMENTO JSON
+﻿# 🎯 NOVO SISTEMA DE ARMAZENAMENTO JSON
 
 ## ✅ Mudanças Implementadas
 
@@ -79,7 +79,7 @@ Exemplo de correlação:
 Get-ChildItem debug/*jogos-olimpicos-inverno-2026*.json
 
 # 2. Abre o WordPress
-Start-Process "https://www.maquinanerd.com.br/?p=71064"
+Start-Process "https://www.thefinance.news/?p=71064"
 
 # 3. Verifica os tokens
 Select-String -Path "logs/tokens/tokens_2026-02-05.jsonl" -Pattern "jogos-olimpicos"

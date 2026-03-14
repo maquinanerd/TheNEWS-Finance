@@ -1,4 +1,4 @@
-# 📋 Checklist de Organização - Confirmado ✅
+﻿# 📋 Checklist de Organização - Confirmado ✅
 
 **Data:** 6 de Fevereiro de 2026  
 **Versão:** 1.0  
@@ -317,7 +317,7 @@ Agora é fácil navegar, manter e escalar.
 
 **Data:** 6 de Fevereiro de 2026  
 **Versão:** 1.0  
-**Desenvolvido para:** The News Máquina Nerd
+**Desenvolvido para:** The News TheFinance
 
 *Tempo total de organização: ~30 minutos*  
 *Arquivos processados: 159+*  

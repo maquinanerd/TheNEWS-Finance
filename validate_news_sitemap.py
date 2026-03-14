@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Google News SEO Validator
@@ -19,7 +19,7 @@ if sys.platform.startswith('win'):
     import codecs
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-def validate_news_sitemap(sitemap_url: str = "https://www.maquinanerd.com.br/news-sitemap.xml"):
+def validate_news_sitemap(sitemap_url: str = "https://www.thefinance.news/news-sitemap.xml"):
     """
     Valida o news-sitemap.xml e gera relatório detalhado
     """
@@ -235,7 +235,7 @@ def validate_news_sitemap(sitemap_url: str = "https://www.maquinanerd.com.br/new
     
     actions.append("3. ✅ Enviar News Sitemap ao Google News Publisher Center")
     actions.append("   → https://newscenter.google.com/")
-    actions.append("   → Adicionar: https://www.maquinanerd.com.br/news-sitemap.xml")
+    actions.append("   → Adicionar: https://www.thefinance.news/news-sitemap.xml")
     
     actions.append("4. ✅ Submeter ao Google Search Console")
     actions.append("   → https://search.google.com/search-console/")

@@ -1,4 +1,4 @@
-# Fix: Canonical Externo — _yoast_wpseo_canonical
+﻿# Fix: Canonical Externo — _yoast_wpseo_canonical
 
 **Data:** 12 de março de 2026  
 **Arquivo alterado:** `app/pipeline.py` — linha 446  
@@ -50,7 +50,7 @@ if related_kws := rewritten_data.get('related_keyphrases'):
 1. Coletava o artigo via RSS (`feeds.py`)
 2. Reescrevia com Gemini AI (`rewriter.py`)
 3. Montava o payload para o WordPress **incluindo** `_yoast_wpseo_canonical` com a URL da fonte
-4. Publicava no `maquinanerd.com.br`
+4. Publicava no `thefinance.news`
 
 O resultado enviado para o WordPress ficava assim no payload:
 
@@ -84,7 +84,7 @@ O Yoast SEO recebia esse valor e gerava no `<head>` de cada artigo:
 Em vez de:
 
 ```html
-<link rel="canonical" href="https://maquinanerd.com.br/slug-do-artigo/" />
+<link rel="canonical" href="https://thefinance.news/slug-do-artigo/" />
 ```
 
 ### Consequência no Google Search Console
@@ -94,7 +94,7 @@ Todos os artigos publicados com esse bug apareciam na categoria:
 > **"Rastreada — não indexada"**  
 > *Detectamos esta URL, mas não a indexamos pois ela sinaliza que o conteúdo canônico está em outro domínio.*
 
-O Google não desobedece canonical voluntariamente. O domínio `maquinanerd.com.br` estava acumulando páginas publicadas que nunca apareceriam na busca enquanto esse bug existisse.
+O Google não desobedece canonical voluntariamente. O domínio `thefinance.news` estava acumulando páginas publicadas que nunca apareceriam na busca enquanto esse bug existisse.
 
 ---
 
@@ -156,7 +156,7 @@ Comportamento padrão do Yoast quando canonical não é definido:
 
 ```html
 <!-- Gerado automaticamente pelo Yoast quando canonical não é sobrescrito -->
-<link rel="canonical" href="https://maquinanerd.com.br/slug-do-artigo/" />
+<link rel="canonical" href="https://thefinance.news/slug-do-artigo/" />
 ```
 
 Isso é exatamente o comportamento correto para indexação.
@@ -174,7 +174,7 @@ Isso é exatamente o comportamento correto para indexação.
 
 **Resultado correto (após a correção):**
 ```html
-<link rel="canonical" href="https://maquinanerd.com.br/slug-do-artigo/" />
+<link rel="canonical" href="https://thefinance.news/slug-do-artigo/" />
 ```
 
 **Resultado incorreto (como estava antes):**

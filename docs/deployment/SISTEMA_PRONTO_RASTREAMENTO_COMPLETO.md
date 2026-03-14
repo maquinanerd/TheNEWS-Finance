@@ -1,4 +1,4 @@
-# ✅ SISTEMA PREPARADO - RASTREAMENTO COMPLETO ATIVADO
+﻿# ✅ SISTEMA PREPARADO - RASTREAMENTO COMPLETO ATIVADO
 
 ## 🎯 O QUE FOI FEITO
 
@@ -125,7 +125,7 @@ Post #1
   💰 Custo estimado:      $0.00011762
   ✅ PUBLICADO NO WORDPRESS:
      - ID WordPress:     54321
-     - URL publicada:    https://www.maquinanerd.com.br/?p=54321
+     - URL publicada:    https://www.thefinance.news/?p=54321
 
 ...
 

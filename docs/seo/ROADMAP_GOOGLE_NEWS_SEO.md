@@ -1,4 +1,4 @@
-# 🎯 MÁQUINA NERD - IMPLEMENTAÇÃO GOOGLE NEWS SEO ✅
+﻿# 🎯 TheFinance - IMPLEMENTAÇÃO GOOGLE NEWS SEO ✅
 
 ## 📊 RELATÓRIO DE VALIDAÇÃO ATUAL
 
@@ -24,7 +24,7 @@ COMPLIANCE GERAL:
 
 1. **Arquivo:** `WPCODE_NEWS_SITEMAP_ENHANCEMENT.php` (já criado)
 2. **Passo a Passo:**
-   - WordPress Dashboard → `https://www.maquinanerd.com.br/wp-admin`
+   - WordPress Dashboard → `https://www.thefinance.news/wp-admin`
    - Plugins → Add New → Buscar "WPCode"
    - Instalar se não tem, depois ativar
    - WPCode → Code Snippets → "+ Add Snippet"
@@ -36,14 +36,14 @@ COMPLIANCE GERAL:
 
 **Verificação:**
 ```bash
-https://www.maquinanerd.com.br/news-sitemap.xml
+https://www.thefinance.news/news-sitemap.xml
 ```
 Deve conter (novo nos próximos posts):
 ```xml
 <news:keywords>Netflix, Série, ...</news:keywords>
 <news:access>Free</news:access>
 <news:image>
-  <news:url>https://www.maquinanerd.com.br/wp-content/.../image.jpg</news:url>
+  <news:url>https://www.thefinance.news/wp-content/.../image.jpg</news:url>
   <news:title>Imagem do post</news:title>
 </news:image>
 ```
@@ -68,8 +68,8 @@ O pipeline ja faz upload de featured image, precisa apenas verificar:
 1. **Login** com conta Google (Gmail)
 
 2. **Adicionar Publicação:**
-   - Name: `Máquina Nerd`
-   - Website: `https://www.maquinanerd.com.br`
+   - Name: `TheFinance`
+   - Website: `https://www.thefinance.news`
    - Category: **Entertainment** → **Movies** → **TV Shows**
    - Language: **Portuguese (pt-BR)**
    - Country: **Brazil**
@@ -95,7 +95,7 @@ O pipeline ja faz upload de featured image, precisa apenas verificar:
 
 4. **Submeter Sitemap:**
    - Seção: "Sitemaps"
-   - URL: `https://www.maquinanerd.com.br/news-sitemap.xml`
+   - URL: `https://www.thefinance.news/news-sitemap.xml`
    - "Add sitemap"
 
 5. **Configurações Extras:**
@@ -112,12 +112,12 @@ O pipeline ja faz upload de featured image, precisa apenas verificar:
 
 1. **Adicione Property (se não tiver):**
    - Type: **Domain or URL prefix**
-   - URL: `https://www.maquinanerd.com.br`
+   - URL: `https://www.thefinance.news`
    - Verify: DNS (recomendado)
 
 2. **Submit News Sitemap:**
    - Left Menu → Sitemaps
-   - URL: `https://www.maquinanerd.com.br/news-sitemap.xml`
+   - URL: `https://www.thefinance.news/news-sitemap.xml`
    - Submit
 
 3. **Monitorar Performance:**
@@ -142,7 +142,7 @@ O pipeline ja faz upload de featured image, precisa apenas verificar:
 ### Antes da Publicação do Próximo Post
 - [ ] WPCode snippet instalado e **ATIVO**
 - [ ] Validar que plugin está ativo em WordPress
-- [ ] Testar com `curl https://www.maquinanerd.com.br/news-sitemap.xml | grep news:keywords`
+- [ ] Testar com `curl https://www.thefinance.news/news-sitemap.xml | grep news:keywords`
 
 ### Depois do Próximo Post Publicado
 - [ ] Aguardar 30 min
@@ -182,7 +182,7 @@ O pipeline ja faz upload de featured image, precisa apenas verificar:
 - Posição média: <#5 para keywords principais
 
 **Trimestre:** Autoridade consolidada
-- Máquina Nerd como "news source" oficial
+- TheFinance como "news source" oficial
 - Impressões: ~5000/mês
 - CTR: >12%
 - Featured snippets possíveis

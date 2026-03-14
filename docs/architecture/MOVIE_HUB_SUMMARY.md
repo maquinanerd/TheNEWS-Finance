@@ -1,4 +1,4 @@
-# 🎬 MOVIE HUB - IMPLEMENTAÇÃO COMPLETA
+﻿# 🎬 MOVIE HUB - IMPLEMENTAÇÃO COMPLETA
 
 **Status:** ✅ CONCLUÍDO  
 **Data:** 3 de fevereiro de 2026  
@@ -480,7 +480,7 @@ sqlalchemy          # ORM para banco de dados
 ## 🎬 Estrutura do Projeto Agora
 
 ```
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 ├── app/
 │   ├── main.py
 │   ├── config.py
@@ -519,4 +519,4 @@ TheNews_MaquinaNerd/
 
 ---
 
-*Criado para Máquina Nerd | 3 de fevereiro de 2026*
+*Criado para TheFinance | 3 de fevereiro de 2026*

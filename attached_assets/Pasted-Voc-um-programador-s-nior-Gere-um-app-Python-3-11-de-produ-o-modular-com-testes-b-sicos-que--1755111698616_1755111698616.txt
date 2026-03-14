@@ -1,4 +1,4 @@
-Você é um programador sênior. Gere um app Python 3.11 de produção, modular, com testes básicos, que:
+﻿Você é um programador sênior. Gere um app Python 3.11 de produção, modular, com testes básicos, que:
 
 1) Objetivo
 Ler feeds RSS na ordem definida, extrair a matéria completa (título, resumo, conteúdo integral, todas as imagens e vídeos/YouTube incorporados, categorias e tags).
@@ -48,7 +48,7 @@ AI_CONFIG = {
 }
 
 WORDPRESS_CONFIG = {
-    'url': os.getenv('WORDPRESS_URL'),      # ex: https://maquinanerd.com.br/wp-json/wp/v2/
+    'url': os.getenv('WORDPRESS_URL'),      # ex: https://thefinance.news/wp-json/wp/v2/
     'user': os.getenv('WORDPRESS_USER'),
     'password': os.getenv('WORDPRESS_PASSWORD')
 }
@@ -67,8 +67,8 @@ SCHEDULE_CONFIG = {
 PIPELINE_CONFIG = {
     'images_mode': os.getenv('IMAGES_MODE', 'hotlink'),  # 'hotlink' | 'download_upload'
     'attribution_policy': 'Via {domain}',
-    'publisher_name': 'Máquina Nerd',
-    'publisher_logo_url': 'https://www.maquinanerd.com.br/wp-content/uploads/2023/11/logo-maquina-nerd-400px.png'
+    'publisher_name': 'TheFinance',
+    'publisher_logo_url': 'https://www.thefinance.news/wp-content/uploads/2023/11/logo-maquina-nerd-400px.png'
 }
 3) Arquitetura e módulos
 Crie um pacote app/ com:
@@ -107,7 +107,7 @@ download_upload: baixar imagens principais e relevantes, subir para /wp/v2/media
 
 Sempre que possível, definir imagem destacada a partir da imagem principal.
 
-wordpress.py: autenticação básica (user/password), criação de post (/wp/v2/posts), set de categories, tags (criar tag se não existir via /wp/v2/tags), excerpt, featured_media e status. Se permitido, tentar setar metadados Yoast (_yoast_wpseo_metadesc, _yoast_wpseo_focuskw) — tentar e ignorar erros se a API não expuser esses campos. Montar domínio base a partir de WORDPRESS_CONFIG['url'] para links internos (ex.: https://www.maquinanerd.com.br).
+wordpress.py: autenticação básica (user/password), criação de post (/wp/v2/posts), set de categories, tags (criar tag se não existir via /wp/v2/tags), excerpt, featured_media e status. Se permitido, tentar setar metadados Yoast (_yoast_wpseo_metadesc, _yoast_wpseo_focuskw) — tentar e ignorar erros se a API não expuser esses campos. Montar domínio base a partir de WORDPRESS_CONFIG['url'] para links internos (ex.: https://www.thefinance.news).
 
 store.py: SQLite (data/app.db) para:
 

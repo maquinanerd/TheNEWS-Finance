@@ -1,8 +1,8 @@
-# 📚 Documentação Completa - TheNews Máquina Nerd
+﻿# 📚 Documentação Completa - TheNews TheFinance
 
 ## 🎯 Visão Geral do Programa
 
-**TheNews Máquina Nerd** é um **pipeline automatizado de conteúdo** que:
+**TheNews TheFinance** é um **pipeline automatizado de conteúdo** que:
 
 1. **Lê feeds RSS** de múltiplas fontes de notícias
 2. **Extrai conteúdo completo** (texto, imagens, vídeos)
@@ -21,7 +21,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    SISTEMA PRINCIPAL                         │
-│                   (TheNews Máquina Nerd)                    │
+│                   (TheNews TheFinance)                    │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -615,7 +615,7 @@ urllib3 (2.5.0+)
 1️⃣1️⃣ PUBLICAÇÃO
    POST /wp-json/wp/v2/posts
    └─ wp_post_id: 12345
-   └─ URL: https://maquinanerd.com.br/post-12345
+   └─ URL: https://thefinance.news/post-12345
 
 1️⃣2️⃣ LOGGING
    ├─ BD: Registrar em seen_articles
@@ -666,7 +666,7 @@ urllib3 (2.5.0+)
 GEMINI_API_KEYS=key1,key2,key3  # Múltiplas chaves para failover
 
 # WordPress
-WORDPRESS_URL=https://maquinanerd.com.br
+WORDPRESS_URL=https://thefinance.news
 WORDPRESS_USER=api_user
 WORDPRESS_PASSWORD=app_password
 
@@ -951,7 +951,7 @@ v1.0 (6 Feb 2026) - Release Inicial
 
 ## 🎯 Conclusão
 
-**TheNews Máquina Nerd** é um sistema **production-ready** que automatiza completamente a criação, otimização e publicação de conteúdo. Com **5 camadas de processamento**, **validação automática**, **rastreamento completo** e **interface web intuitiva**, oferece uma solução end-to-end para portais de notícias.
+**TheNews TheFinance** é um sistema **production-ready** que automatiza completamente a criação, otimização e publicação de conteúdo. Com **5 camadas de processamento**, **validação automática**, **rastreamento completo** e **interface web intuitiva**, oferece uma solução end-to-end para portais de notícias.
 
 **Status:** ✅ **100% Pronto para Produção**
 
@@ -959,4 +959,4 @@ v1.0 (6 Feb 2026) - Release Inicial
 
 *Última atualização: 6 de Fevereiro de 2026*
 *Versão: 1.0*
-*Desenvolvido para The News Máquina Nerd*
+*Desenvolvido para The News TheFinance*

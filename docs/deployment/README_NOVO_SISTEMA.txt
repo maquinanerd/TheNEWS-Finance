@@ -1,4 +1,4 @@
-📋 ÍNDICE DE DOCUMENTAÇÃO - NOVO SISTEMA DE RASTREAMENTO JSON
+﻿📋 ÍNDICE DE DOCUMENTAÇÃO - NOVO SISTEMA DE RASTREAMENTO JSON
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -103,7 +103,7 @@ Registra nos TOKENS
 Exemplo 1: Você vê um post publicado
 ─────────────────────────────────────
 
-URL: https://www.maquinanerd.com.br/jogos-olimpicos-inverno-2026-filmes-series/
+URL: https://www.thefinance.news/jogos-olimpicos-inverno-2026-filmes-series/
 
 Para encontrar tudo sobre ele:
   $ python find_json.py "olimpicos"
@@ -119,7 +119,7 @@ Exemplo 2: Você quer saber o WordPress ID
   
   Resultado:
   wp_post_id: 71064
-  URL: https://www.maquinanerd.com.br/?p=71064
+  URL: https://www.thefinance.news/?p=71064
 
 
 Exemplo 3: Você quer tokens gastos em um post

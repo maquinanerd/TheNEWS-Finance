@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 ANÁLISE DETALHADA DO LOG - 2025-10-30 14:02:24 a 14:03:58
-Pipeline TheNews MaquinaNerd
+Pipeline TheNews TheFinance
 """
 
 RELATORIO = """

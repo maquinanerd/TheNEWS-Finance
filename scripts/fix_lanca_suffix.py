@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Script para remover o sufixo "lança" dos títulos dos posts no WordPress.
 Corrige o bug do SEO Title Optimizer que estava adicionando "lança" incorretamente.
@@ -9,7 +9,7 @@ import json
 from typing import List, Dict, Optional
 
 # Configuração
-WP_SITE_URL = "https://www.maquinanerd.com.br"
+WP_SITE_URL = "https://www.thefinance.news"
 WP_API_URL = f"{WP_SITE_URL}/wp-json/wp/v2/posts"
 
 # Credenciais (você precisa adicionar aqui)

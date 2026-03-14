@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Script simples para testar POST direto no WordPress via API
 """
@@ -27,7 +27,7 @@ test_sizes = [
     ('XL', 20000),
 ]
 
-url = 'https://www.maquinanerd.com.br/wp-json/wp/v2/posts'
+url = 'https://www.thefinance.news/wp-json/wp/v2/posts'
 
 for name, content_size in test_sizes:
     print(f"\n[TESTE] Payload {name} (~{content_size} bytes)")

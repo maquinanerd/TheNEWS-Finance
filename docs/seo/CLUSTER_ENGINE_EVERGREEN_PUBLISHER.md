@@ -1,4 +1,4 @@
-# 15 e 16 — Cluster Engine + Evergreen Publisher
+﻿# 15 e 16 — Cluster Engine + Evergreen Publisher
 
 **Implementado em:** 12/03/2026  
 **Arquivos criados:** `app/cluster_engine.py`, `app/evergreen_publisher.py`  
@@ -130,7 +130,7 @@ Criada automaticamente na primeira execução em `data/app.db`:
 
 Cada prompt já inclui as regras do portal:
 - Estrutura `O que você precisa saber` como primeiro H2
-- `Nossa Análise` como último H2
+- `Our Analysis` como último H2
 - H3 obrigatório em cada H2
 - Retorna apenas HTML sem tags de documento
 

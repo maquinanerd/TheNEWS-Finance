@@ -1,4 +1,4 @@
-# ✅ RESOLUÇÃO: Problema com Postagem de Imagens - SOLUCIONADO
+﻿# ✅ RESOLUÇÃO: Problema com Postagem de Imagens - SOLUCIONADO
 
 ## 📋 Diagnóstico
 
@@ -42,7 +42,7 @@ Status: SUCESSO ✅
 ```
 Status: SUCESSO ✅
 - Imagem uploadada: Media ID 70771
-- URL da imagem: https://www.maquinanerd.com.br/wp-content/uploads/2026/01/test-image.jpg
+- URL da imagem: https://www.thefinance.news/wp-content/uploads/2026/01/test-image.jpg
 - Post criado com imagem em destaque: Post ID 70772
 - Featured media corretamente associado
 ```

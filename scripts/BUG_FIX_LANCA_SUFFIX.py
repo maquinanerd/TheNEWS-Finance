@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 BUG FIX: Remover sufixo "lança" incorreto do SEO Title Optimizer
 Data: 2025-10-30
@@ -72,7 +72,7 @@ Observação: Os IDs exatos podem variar - verificar no WordPress admin
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 OPÇÃO A: Manualmente (Mais Seguro)
-  1. Acesse: https://www.maquinanerd.com.br/wp-admin/edit.php
+  1. Acesse: https://www.thefinance.news/wp-admin/edit.php
   2. Para cada post com " lança" no final:
      ✓ Clique em "Editar"
      ✓ Remove " lança" do título

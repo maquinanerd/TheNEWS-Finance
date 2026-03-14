@@ -1,4 +1,4 @@
-# 🚀 TheNews Máquina Nerd - Pipeline Automatizado
+﻿# 🚀 TheNews TheFinance - Pipeline Automatizado
 
 > Sistema de produção que automatiza leitura de feeds RSS, reescrita com IA e publicação em WordPress
 
@@ -12,7 +12,7 @@
 ## 🏗️ Estrutura do Projeto
 
 ```
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 ├── app/                    # Módulos principais da aplicação
 │   ├── main.py            # Ponto de entrada
 │   ├── pipeline.py        # Orquestração
@@ -260,6 +260,6 @@ Veja todos em [`scripts/`](scripts/)
 
 ---
 
-**Desenvolvido para The News Máquina Nerd**
+**Desenvolvido para The News TheFinance**
 
 *Para documentação completa, detalhes técnicos e fluxos, veja [DOCUMENTACAO_PROGRAMA_COMPLETA.md](docs/DOCUMENTACAO_PROGRAMA_COMPLETA.md)*

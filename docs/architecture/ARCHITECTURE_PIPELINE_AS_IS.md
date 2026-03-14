@@ -1,9 +1,9 @@
-# ARCHITECTURE_PIPELINE_AS_IS.md
+﻿# ARCHITECTURE_PIPELINE_AS_IS.md
 
-> **Documento:** Arquitetura Atual da Automação do Portal Máquina Nerd  
+> **Documento:** Arquitetura Atual da Automação do Portal TheFinance  
 > **Status:** AS-IS (estado real do código em produção)  
 > **Atualizado em:** Março de 2026  
-> **Baseado em:** código-fonte do repositório `maquinanerd/TheNerdMN`, branch `main`
+> **Baseado em:** código-fonte do repositório `TheFinance/TheNerdMN`, branch `main`
 
 ---
 
@@ -188,7 +188,7 @@ Campos injetados no template via `_safe_format_prompt()` (substituição segura,
 | `{titulo_original}` | título do item no feed |
 | `{url_original}` | URL da matéria-fonte |
 | `{content}` | HTML extraído pelo `extractor.py` |
-| `{domain}` | domínio do portal (ex: `maquinanerd.com.br`) |
+| `{domain}` | domínio do portal (ex: `thefinance.news`) |
 | `{fonte_nome}` | hostname da fonte (ex: `screenrant.com`) |
 | `{categoria}` | categoria configurada no feed |
 | `{schema_original}` | JSON-LD extraído da página fonte |
@@ -282,7 +282,7 @@ O Gemini devolve um objeto JSON com o array `resultados`. Cada elemento do array
 
       "conteudo_final": "<p>A <b>Marvel Studios</b> confirmou...</p><h2>O que esperar...</h2>...",
       // HTML · Mínimo 3 <h2> · Parágrafos curtos · Imagens em <figure><figcaption>
-      // Links internos absolutos: <a href="https://maquinanerd.com.br/tag/marvel">Marvel</a>
+      // Links internos absolutos: <a href="https://thefinance.news/tag/marvel">Marvel</a>
 
       "meta_description": "Marvel Studios confirma data de estreia de Vingadores 5 no Disney+ para 2027. Filme encerra a Saga do Multiverso.",
       // String · 140–155 chars · Contém focus_keyphrase · Sem CTA
@@ -495,7 +495,7 @@ O `add_internal_links()` opera com um `link_map` carregado do banco de dados, qu
 ```
 GET  {featured_image_url}           → baixa bytes da imagem (timeout: 25s)
 POST /wp-json/wp/v2/media           → upload com headers Content-Disposition + Content-Type
-     → retorna { "id": 9834, "source_url": "https://maquinanerd.com.br/wp-content/..." }
+     → retorna { "id": 9834, "source_url": "https://thefinance.news/wp-content/..." }
 POST /wp-json/wp/v2/media/9834      → atualiza alt_text = título do artigo
 ```
 
@@ -558,7 +558,7 @@ Depois de receber o `wp_post_id`, o pipeline faz um `POST /posts/{id}` com metad
     "_yoast_wpseo_title":              "Vingadores 5 tem data confirmada pela Marvel",
     "_yoast_wpseo_metadesc":           "Marvel Studios confirma data para 2027...",
     "_yoast_wpseo_focuskw":            "Vingadores 5 Marvel",
-    "_yoast_wpseo_opengraph-image":    "https://maquinanerd.com.br/wp-content/uploads/.../poster.jpg",
+    "_yoast_wpseo_opengraph-image":    "https://thefinance.news/wp-content/uploads/.../poster.jpg",
     "_yoast_wpseo_opengraph-image-id": "9834",
     "_yoast_wpseo_content_score":      "90"
   }
@@ -643,7 +643,7 @@ Todas as configurações sensíveis são lidas via variáveis de ambiente (arqui
 | `GEMINI_KEY_1` | `AIzaXXXXXX...` | Chave primária Gemini |
 | `GEMINI_KEY_2` | `AIzaYYYYYY...` | Chave secundária (rodízio) |
 | `GEMINI_MODEL_ID` | `gemini-2.5-flash-lite` | Modelo em uso |
-| `WORDPRESS_URL` | `https://maquinanerd.com.br/wp-json/wp/v2` | Endpoint da REST API |
+| `WORDPRESS_URL` | `https://thefinance.news/wp-json/wp/v2` | Endpoint da REST API |
 | `WORDPRESS_USER` | `admin` | Usuário de autenticação |
 | `WORDPRESS_PASSWORD` | `xxxx xxxx xxxx` | Application Password |
 | `MAX_PER_FEED_CYCLE` | `3` | Máx artigos por feed por ciclo |
@@ -700,4 +700,4 @@ app/
 
 ---
 
-*Documento gerado com base no código real do repositório `maquinanerd/TheNerdMN`, branch `main`. Para atualizações, consulte diretamente os arquivos fonte referenciados em cada seção.*
+*Documento gerado com base no código real do repositório `TheFinance/TheNerdMN`, branch `main`. Para atualizações, consulte diretamente os arquivos fonte referenciados em cada seção.*

@@ -1,4 +1,4 @@
-# 🎬 Movie Hub - Sistema Completo de Filmes & Séries
+﻿# 🎬 Movie Hub - Sistema Completo de Filmes & Séries
 
 **Criado em:** 3 de fevereiro de 2026
 
@@ -530,6 +530,6 @@ repo.search_movies(query, limit)
 
 ---
 
-**Sistema criado para Máquina Nerd | Fevereiro 2026**
+**Sistema criado para TheFinance | Fevereiro 2026**
 
 Dúvidas? Consulte os docstrings nos arquivos Python!

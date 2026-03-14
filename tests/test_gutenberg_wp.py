@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Test Gutenberg block conversion with WordPress"""
 
 import requests
@@ -43,7 +43,7 @@ payload = {
     'categories': [20],
 }
 
-url = 'https://www.maquinanerd.com.br/wp-json/wp/v2/posts'
+url = 'https://www.thefinance.news/wp-json/wp/v2/posts'
 payload_size = len(json.dumps(payload))
 
 print(f"\n📊 Payload:")

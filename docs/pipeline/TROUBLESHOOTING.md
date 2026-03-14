@@ -1,4 +1,4 @@
-# Troubleshooting & FAQ
+﻿# Troubleshooting & FAQ
 
 ## ❓ Perguntas Frequentes
 
@@ -284,7 +284,7 @@ print(title_report['original_score'])
 ### Test #1: SEO Title Optimizer
 
 ```bash
-cd e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_MaquinaNerd
+cd e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_TheFinance
 python app/seo_title_optimizer.py
 ```
 

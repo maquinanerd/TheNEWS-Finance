@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Extrai URLs dos sitemaps cujo <lastmod> começa com a data alvo.
 Salva em 'posts_2025-10-30.txt'.
@@ -7,7 +7,7 @@ import requests
 from xml.etree import ElementTree as ET
 from urllib.parse import urljoin
 
-SITE = "https://maquinanerd.com.br"
+SITE = "https://thefinance.news"
 TARGET_DATE = "2025-10-30"
 HEADERS = {'User-Agent':'Mozilla/5.0'}
 

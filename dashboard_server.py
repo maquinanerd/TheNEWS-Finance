@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Dashboard Avançado - TheNews MaquinaNerd
+Dashboard Avançado - TheNews TheFinance
 Exibe tokens, feeds, posts publicados, status e métricas de SEO
 """
 
@@ -246,7 +246,7 @@ def get_dashboard_html():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - TheNews MaquinaNerd</title>
+    <title>Dashboard - TheNews TheFinance</title>
     <style>
         :root {
             --bs-purple: #7367f0;
@@ -440,7 +440,7 @@ def get_dashboard_html():
 <body>
     <div class="header">
         <div class="container">
-            <h1>📊 TheNews MaquinaNerd</h1>
+            <h1>📊 TheNews TheFinance</h1>
             <p>Real-time Token Tracking & Content Pipeline Metrics</p>
         </div>
     </div>

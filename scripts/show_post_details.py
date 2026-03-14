@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Script para mostrar detalhes COMPLETOS do último post processado.
 Correlaciona dados de tokens com o JSON gerado e banco de dados.
@@ -172,7 +172,7 @@ def main():
         wp_info = get_wordpress_post(db_id)
         if wp_info:
             wp_id, wp_status, processed_at = wp_info
-            print(f"✅ Link publicado:      https://www.maquinanerd.com.br/?p={wp_id}")
+            print(f"✅ Link publicado:      https://www.thefinance.news/?p={wp_id}")
             print(f"   Status: {wp_status}")
         else:
             print(f"✅ Link publicado:      Post encontrado no DB (status: {status})")

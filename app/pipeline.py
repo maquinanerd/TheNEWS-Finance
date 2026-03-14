@@ -86,7 +86,7 @@ def assess_content_quality(content_html: str) -> dict:
 
     # 3. Links internos (distribuem PageRank, ajudam cluster)
     int_links = [a for a in soup.find_all("a", href=True)
-                 if "maquinanerd.com.br" in a["href"]]
+                 if "thefinance.news" in a["href"]]
     if   len(int_links) >= 2: score += 20
     elif len(int_links) >= 1: score += 10
 
@@ -637,7 +637,7 @@ def process_batch(articles: List[Dict[str, Any]], link_map: Dict[str, Any]):
                                 
                                 sanitized_ok = wp_client.sanitize_published_post(wp_post_id)
                                 if sanitized_ok:
-                                    wp_post_url = f"https://www.maquinanerd.com.br/?p={wp_post_id}"
+                                    wp_post_url = f"https://www.thefinance.news/?p={wp_post_id}"
                                     logger.info(f"PUBLICADO: Post {wp_post_id} | {title[:70]}")
                                     logger.info(f"  URL no WordPress: {wp_post_url}")
                                     logger.info(f"  Categorias: {final_category_ids}")
@@ -680,7 +680,7 @@ def process_batch(articles: List[Dict[str, Any]], link_map: Dict[str, Any]):
                                     # ✅ LINK STORE — salvar artigo publicado para links internos futuros
                                     ls_save_article(
                                         title=title,
-                                        url=f"https://www.maquinanerd.com.br/{rewritten_data.get('slug', 'sem-slug')}/",
+                                        url=f"https://www.thefinance.news/{rewritten_data.get('slug', 'sem-slug')}/",
                                         category=art_data['category'],
                                         entity=event.get("entity", ""),
                                     )

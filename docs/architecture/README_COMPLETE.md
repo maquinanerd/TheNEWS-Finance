@@ -1,4 +1,4 @@
-# 🚀 TheNerdMN - Pipeline Automatizado de Conteúdo com IA
+﻿# 🚀 TheNerdMN - Pipeline Automatizado de Conteúdo com IA
 
 **Sistema completo de automatização de publicação de artigos**: lê feeds RSS, reescreve com IA (Gemini), e publica no WordPress em tempo real.
 
@@ -137,7 +137,7 @@
 
 ```bash
 # Clone o repositório
-git clone https://github.com/maquinanerd/TheNerdMN.git
+git clone https://github.com/TheFinance/TheNerdMN.git
 cd TheNerdMN
 
 # Crie e ative ambiente virtual
@@ -379,7 +379,7 @@ Ctrl+C
 ## 📁 Estrutura de Arquivos
 
 ```
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py                 # 🔴 Ponto de entrada
@@ -568,7 +568,7 @@ Se encontrar problemas:
 
 ## 📄 Licença
 
-Este projeto é privado e propriedade de MaquinaNerd.
+Este projeto é privado e propriedade de TheFinance.
 
 ---
 

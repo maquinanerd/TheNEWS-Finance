@@ -1,8 +1,8 @@
-# MaquinaNerd Pipeline — Guia Completo do Produto
+﻿# TheFinance Pipeline — Guia Completo do Produto
 
 > **Versão:** 2.0 | **Data:** Março de 2026  
-> **Produto:** TheNews_MaquinaNerd — Automação editorial RSS → IA → WordPress  
-> **Portal:** maquinanerd.com.br  
+> **Produto:** TheNews_TheFinance — Automação editorial RSS → IA → WordPress  
+> **Portal:** thefinance.news  
 > **Stack:** Python 3.11 · Google Gemini · WordPress REST API · SQLite · APScheduler
 
 ---
@@ -34,7 +34,7 @@
 
 ## 1. Visão Geral do Produto
 
-O **MaquinaNerd Pipeline** é um sistema de automação editorial de produção que transforma feeds RSS internacionais (em inglês) em artigos jornalísticos publicados automaticamente em Português-Brasil no portal **maquinanerd.com.br**, com total otimização para SEO.
+O **TheFinance Pipeline** é um sistema de automação editorial de produção que transforma feeds RSS internacionais (em inglês) em artigos jornalísticos publicados automaticamente em Português-Brasil no portal **thefinance.news**, com total otimização para SEO.
 
 ### O que o sistema faz em 30 segundos
 
@@ -69,7 +69,7 @@ O **MaquinaNerd Pipeline** é um sistema de automação editorial de produção 
 
 ### Contexto editorial
 
-Portais de entretenimento como o MaquinaNerd competem com gigantes (Omelete, IGN Brasil, AdoroCinema) pela fração de audiência de cultura pop no Brasil. O desafio central é **volume + qualidade editorial + SEO**, pois o Google News e o Google Discover privilegiam portais que publicam com frequência, consistência e otimização técnica.
+Portais de entretenimento como o TheFinance competem com gigantes (Omelete, IGN Brasil, AdoroCinema) pela fração de audiência de cultura pop no Brasil. O desafio central é **volume + qualidade editorial + SEO**, pois o Google News e o Google Discover privilegiam portais que publicam com frequência, consistência e otimização técnica.
 
 ### Solução automatizada
 
@@ -588,7 +588,7 @@ O WordPress com Yoast gera automaticamente:
   "description": "Meta description (140–155 chars)",
   "image": {
     "@type": "ImageObject",
-    "url": "https://maquinanerd.com.br/wp-content/uploads/...",
+    "url": "https://thefinance.news/wp-content/uploads/...",
     "width": 1200,
     "height": 630
   },
@@ -600,15 +600,15 @@ O WordPress com Yoast gera automaticamente:
   },
   "publisher": {
     "@type": "Organization",
-    "name": "MaquinaNerd",
+    "name": "TheFinance",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://maquinanerd.com.br/logo.png"
+      "url": "https://thefinance.news/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://maquinanerd.com.br/post-slug/"
+    "@id": "https://thefinance.news/post-slug/"
   }
 }
 ```
@@ -885,7 +885,7 @@ Com o modelo `gemini-2.5-flash-lite`:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/maquinanerd/TheNerdMN.git
+git clone https://github.com/TheFinance/TheNerdMN.git
 cd TheNerdMN
 
 # 2. Crie o ambiente virtual
@@ -937,7 +937,7 @@ AI_MODEL=gemini-2.5-flash-lite
 # ================================
 # WORDPRESS
 # ================================
-WORDPRESS_URL=https://maquinanerd.com.br/wp-json/wp/v2
+WORDPRESS_URL=https://thefinance.news/wp-json/wp/v2
 WORDPRESS_USER=seu_usuario
 WORDPRESS_PASSWORD=sua_application_password
 
@@ -1189,7 +1189,7 @@ Indicadores a monitorar:
 | **Rate Limiting** | Controle da frequência de chamadas a uma API |
 | **RSS** | Really Simple Syndication — formato XML para distribuição de conteúdo |
 | **Schema.org** | Vocabulário de dados estruturados para web semântica |
-| **Slug** | Parte da URL amigável de um post: `maquinanerd.com.br/slug-do-artigo/` |
+| **Slug** | Parte da URL amigável de um post: `thefinance.news/slug-do-artigo/` |
 | **SQLite** | Banco de dados relacional embutido, sem servidor |
 | **trafilatura** | Biblioteca Python para extração de conteúdo editorial de páginas HTML |
 | **TMDb** | The Movie Database — base de dados de filmes, séries e pessoas |
@@ -1215,4 +1215,4 @@ Indicadores a monitorar:
 
 ---
 
-*Documentação gerada em 06 de março de 2026 | MaquinaNerd Pipeline v2.0*
+*Documentação gerada em 06 de março de 2026 | TheFinance Pipeline v2.0*

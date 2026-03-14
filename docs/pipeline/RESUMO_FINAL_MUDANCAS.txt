@@ -1,4 +1,4 @@
-╔═══════════════════════════════════════════════════════════════════════════════╗
+﻿╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                               ║
 ║                       🎯 RESUMO FINAL DAS MUDANÇAS                           ║
 ║                                                                               ║
@@ -92,7 +92,7 @@ Registra nos TOKENS
 ────────────────────
 
 Você vê a URL publicada:
-  https://www.maquinanerd.com.br/jogos-olimpicos-inverno-2026-filmes-series/
+  https://www.thefinance.news/jogos-olimpicos-inverno-2026-filmes-series/
 
 Quer encontrar TUDO relacionado:
 
@@ -117,7 +117,7 @@ Quer encontrar TUDO relacionado:
      }
 
   4. Acessar post no WordPress:
-     https://www.maquinanerd.com.br/?p=71064
+     https://www.thefinance.news/?p=71064
 
 ✅ TUDO RASTREÁVEL E CORRELACIONADO!
 

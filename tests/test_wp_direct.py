@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Teste direto de criação de post em WordPress"""
 import json
 from requests.auth import HTTPBasicAuth
 import requests
 
 # Configuração WordPress
-URL = "https://www.maquinanerd.com.br/wp-json/wp/v2/posts"
+URL = "https://www.thefinance.news/wp-json/wp/v2/posts"
 USER = "Pablo Gameleira"
 PASSWORD = "aXvV GxAV GCMV jBfc ZIT2 5aWe"
 

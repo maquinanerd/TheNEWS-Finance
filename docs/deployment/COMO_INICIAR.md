@@ -1,4 +1,4 @@
-# 🚀 Como Iniciar o Pipeline Automaticamente
+﻿# 🚀 Como Iniciar o Pipeline Automaticamente
 
 ## Opção 1: Iniciar Manual (Clique e Pronto)
 
@@ -20,7 +20,7 @@ O sistema iniciará **automaticamente toda vez que Windows reiniciar**.
 Cole este comando exato no CMD:
 
 ```
-schtasks /create /tn "TheNerdMN Pipeline" /tr "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_MaquinaNerd\INICIAR_PIPELINE.bat" /sc onboot /rl highest /f
+schtasks /create /tn "TheNerdMN Pipeline" /tr "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_TheFinance\INICIAR_PIPELINE.bat" /sc onboot /rl highest /f
 ```
 
 **Esperado**: `SUCCESS: The scheduled task "TheNerdMN Pipeline" has been created successfully.`

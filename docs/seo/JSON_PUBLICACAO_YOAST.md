@@ -1,6 +1,6 @@
-# Como o JSON é Criado, Publicado e Sincronizado com o Yoast SEO
+﻿# Como o JSON é Criado, Publicado e Sincronizado com o Yoast SEO
 
-> Documentação técnica do pipeline da Máquina Nerd — do RSS à publicação no WordPress com metadados SEO completos.
+> Documentação técnica do pipeline da TheFinance — do RSS à publicação no WordPress com metadados SEO completos.
 
 ---
 
@@ -44,7 +44,7 @@ O arquivo `app/ai_processor.py` monta um prompt com **regras obrigatórias** (`A
 titulo_original  → título do artigo-fonte
 url_original     → URL da notícia original
 content          → HTML completo extraído da página
-domain           → domínio do portal (ex: maquinanerd.com.br)
+domain           → domínio do portal (ex: thefinance.news)
 fonte_nome       → nome da fonte (ex: igorsner.com)
 categoria        → categoria sugerida pelo feed
 schema_original  → JSON-LD extraído da página fonte (se existir)
@@ -247,7 +247,7 @@ Antes de criar o post, a imagem é enviada para a Media Library:
 ```
 GET  {imagem_url}                        → baixa os bytes da imagem
 POST /wp-json/wp/v2/media                → faz upload com Content-Disposition + Content-Type
-     → retorna { "id": 9834, "source_url": "https://maquinanerd.com.br/wp-content/..." }
+     → retorna { "id": 9834, "source_url": "https://thefinance.news/wp-content/..." }
 
 POST /wp-json/wp/v2/media/9834           → atualiza alt_text com o título do artigo
 ```
@@ -300,7 +300,7 @@ yoast_fields = {
     "_yoast_wpseo_title":              "SEO Title",
     "_yoast_wpseo_metadesc":           "Meta description",
     "_yoast_wpseo_focuskw":            "palavra-chave",
-    "_yoast_wpseo_opengraph-image":    "https://maquinanerd.com.br/wp-content/...",  # URL real da imagem
+    "_yoast_wpseo_opengraph-image":    "https://thefinance.news/wp-content/...",  # URL real da imagem
     "_yoast_wpseo_opengraph-image-id": "9834",   # ID na Media Library
     "_yoast_wpseo_content_score":      "90",
 }
@@ -352,7 +352,7 @@ Body: { "meta": news_fields }
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          PIPELINE MÁQUINA NERD                              │
+│                          PIPELINE TheFinance                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 
   [RSS Feed]
@@ -427,7 +427,7 @@ Body: { "meta": news_fields }
 
   RESULTADO FINAL:
   ┌────────────────────────────────────────────────────────────────┐
-  │  Post publicado em https://maquinanerd.com.br/?p=12345        │
+  │  Post publicado em https://thefinance.news/?p=12345        │
   │  ✅ Título SEO configurado no Yoast                           │
   │  ✅ Meta description no Yoast                                 │
   │  ✅ Focus keyphrase no Yoast                                  │

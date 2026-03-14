@@ -137,7 +137,7 @@ SCHEDULE_CONFIG = {
 PIPELINE_CONFIG = {
     'images_mode': os.getenv('IMAGES_MODE', 'hotlink'),  # 'hotlink' ou 'download_upload'
     'attribution_policy': 'Fonte: {domain}',
-    'publisher_name': 'MaquinaNerd',
+    'publisher_name': 'TheFinance',
     'publisher_logo_url': os.getenv(
         'PUBLISHER_LOGO_URL',
         'https://exemplo.com/logo.png'  # TODO: atualizar para a URL real do logo

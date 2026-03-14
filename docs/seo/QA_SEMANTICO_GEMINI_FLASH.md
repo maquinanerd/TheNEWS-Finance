@@ -1,4 +1,4 @@
-# 17 — QA Semântico · Camada 2 via Gemini 2.5 Flash
+﻿# 17 — QA Semântico · Camada 2 via Gemini 2.5 Flash
 
 **Implementado em:** 12/03/2026  
 **Arquivo alterado:** `app/pipeline.py`  
@@ -41,7 +41,7 @@ A Camada 2 **não roda para todos os artigos** — apenas para score 35–50. Ar
 
 | Camada | Ferramenta | Custo | Quando roda | O que avalia |
 |---|---|---|---|---|
-| 1 (sempre) | Python puro | $0 | Todo artigo | Palavras, H3, links, "Nossa Análise" |
+| 1 (sempre) | Python puro | $0 | Todo artigo | Palavras, H3, links, "Our Analysis" |
 | 2 (opcional) | Gemini 2.5 Flash | ~$0,24/mês | Score 35–50 | CTA residual, valor semântico, tipo |
 
 ---

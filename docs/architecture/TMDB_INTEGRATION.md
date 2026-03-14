@@ -1,4 +1,4 @@
-# Integração TMDb (The Movie Database) - Máquina Nerd
+﻿# Integração TMDb (The Movie Database) - TheFinance
 
 ## O que é TMDb?
 
@@ -21,7 +21,7 @@
 2. Crie uma conta gratuita (se não tiver)
 3. Clique em "Create" para criar uma nova app
 4. Preencha:
-   - App name: "Máquina Nerd"
+   - App name: "TheFinance"
    - App Type: "Personal Use"
    - Terms: Aceite
 5. Copie a **API Key (v3 auth)**
@@ -292,4 +292,4 @@ if TMDB_CONFIG['enabled']:
 
 ---
 
-**Criado para Máquina Nerd | Fevereiro 2026**
+**Criado para TheFinance | Fevereiro 2026**

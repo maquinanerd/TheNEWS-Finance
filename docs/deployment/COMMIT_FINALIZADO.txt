@@ -1,4 +1,4 @@
-✅ COMMIT FINALIZADO
+﻿✅ COMMIT FINALIZADO
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -61,7 +61,7 @@ Objetos:        113 enviados
 Compressão:     201.73 KiB
 Tempo:          < 1 segundo
 
-URL Repositório: https://github.com/maquinanerd/TheNerdMN.git
+URL Repositório: https://github.com/TheFinance/TheNerdMN.git
 Branch:          main
 
 ═══════════════════════════════════════════════════════════════════════════════

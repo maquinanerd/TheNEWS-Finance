@@ -1,4 +1,4 @@
-# 18/19 — Links Internos Automáticos
+﻿# 18/19 — Links Internos Automáticos
 
 **Implementado em:** 12/03/2026  
 **Arquivos criados:** `app/link_store.py`  
@@ -112,7 +112,7 @@ Dentro do bloco `if sanitized_ok:`, após o `[CLUSTER]` block:
 ```python
 ls_save_article(
     title=title,
-    url=f"https://www.maquinanerd.com.br/{rewritten_data.get('slug', 'sem-slug')}/",
+    url=f"https://www.thefinance.news/{rewritten_data.get('slug', 'sem-slug')}/",
     category=art_data['category'],
     entity=event.get("entity", ""),
 )
@@ -158,8 +158,8 @@ Aparece ao final do bloco de dados, depois de `{content}`. Quando há artigos re
 
 ```
 LINKS INTERNOS DISPONÍVEIS — use 1 a 3 destes no corpo do artigo com texto âncora descritivo:
-- URL: https://www.maquinanerd.com.br/batman-cavaleiro-das-trevas-4/ | Título: "Batman 4 tem estreia confirmada pela DC"
-- URL: https://www.maquinanerd.com.br/batman-dc-studios-2025/ | Título: "DC Studios revela planos para Batman no DCU"
+- URL: https://www.thefinance.news/batman-cavaleiro-das-trevas-4/ | Título: "Batman 4 tem estreia confirmada pela DC"
+- URL: https://www.thefinance.news/batman-dc-studios-2025/ | Título: "DC Studios revela planos para Batman no DCU"
 REGRA DO TEXTO ÂNCORA: escolha palavras do TEMA do artigo de destino. PROIBIDO: 'clique aqui', 'saiba mais', 'leia também'.
 ```
 

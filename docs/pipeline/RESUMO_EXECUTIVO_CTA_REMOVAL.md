@@ -1,4 +1,4 @@
-# 🚨 RESUMO EXECUTIVO: NUCLEAR CTA REMOVAL SOLUTION
+﻿# 🚨 RESUMO EXECUTIVO: NUCLEAR CTA REMOVAL SOLUTION
 
 ## ✅ STATUS: IMPLEMENTADO, TESTADO E PRONTO PARA PRODUÇÃO
 
@@ -170,7 +170,7 @@ for cta_phrase in final_cta_check:
 
 ### 1. Executar o Pipeline
 ```bash
-cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_MaquinaNerd"
+cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_TheFinance"
 python -m app.main
 ```
 

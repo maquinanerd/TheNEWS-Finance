@@ -1,4 +1,4 @@
-# 📋 LEVANTAMENTO COMPLETO - TheNews Máquina Nerd
+﻿# 📋 LEVANTAMENTO COMPLETO - TheNews TheFinance
 
 **Data**: 18 de Fevereiro de 2026  
 **Status Final**: Análise concluída  

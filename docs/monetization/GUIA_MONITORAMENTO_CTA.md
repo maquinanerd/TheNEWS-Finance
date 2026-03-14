@@ -1,4 +1,4 @@
-# 📊 GUIA DE MONITORAMENTO: CTA REMOVAL
+﻿# 📊 GUIA DE MONITORAMENTO: CTA REMOVAL
 
 ## 🔍 Como Verificar se CTA Removal Está Funcionando
 
@@ -8,7 +8,7 @@
 
 ### Abrir terminal
 ```bash
-cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_MaquinaNerd"
+cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_TheFinance"
 ```
 
 ### Ver apenas eventos de CTA

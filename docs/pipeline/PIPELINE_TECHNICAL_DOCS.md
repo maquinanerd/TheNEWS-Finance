@@ -1,7 +1,7 @@
-# Documentação Técnica do Pipeline — MaquinaNerd
+﻿# Documentação Técnica do Pipeline — TheFinance
 
 > **Versão:** 1.0 | **Data:** Março de 2026  
-> **Projeto:** TheNews_MaquinaNerd — Automação de conteúdo RSS → IA → WordPress
+> **Projeto:** TheNews_TheFinance — Automação de conteúdo RSS → IA → WordPress
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### Objetivo
 
-O pipeline MaquinaNerd é uma automação de produção de conteúdo jornalístico para o portal **maquinanerd.com.br**. Ele resolve o problema de escalar a produção de notícias de entretenimento (filmes, séries, games) sem aumentar a equipe editorial.
+O pipeline TheFinance é uma automação de produção de conteúdo jornalístico para o portal **thefinance.news**. Ele resolve o problema de escalar a produção de notícias de entretenimento (filmes, séries, games) sem aumentar a equipe editorial.
 
 ### Como funciona em resumo
 
@@ -256,7 +256,7 @@ ETAPA 17 — Delay entre publicações
 
 **Interface principal:**
 ```python
-feed_reader = FeedReader(user_agent="MaquinaNerd")
+feed_reader = FeedReader(user_agent="TheFinance")
 items = feed_reader.read_feeds(feed_config, source_id)
 # retorna: List[Dict] com campos: id, title, link, published
 ```
@@ -309,7 +309,7 @@ results = ai_processor.rewrite_batch([{
     "content_html": "...",
     "source_url": "...",
     "category": "movies",
-    "domain": "maquinanerd.com.br",
+    "domain": "thefinance.news",
     ...
 }])
 # retorna: List[Tuple[Optional[dict], Optional[str]]]
@@ -505,7 +505,7 @@ GEMINI_KEY_2=AIza...
 
 **Variáveis de ambiente necessárias:**
 ```
-WORDPRESS_URL=https://www.maquinanerd.com.br/wp-json/wp/v2
+WORDPRESS_URL=https://www.thefinance.news/wp-json/wp/v2
 WORDPRESS_USER=usuario_wp
 WORDPRESS_PASSWORD=senha_de_aplicacao
 ```
@@ -747,7 +747,7 @@ CREATE TABLE seen_articles (
     "videos": ["dQw4w9WgXcQ"],
     "images": ["https://cdn.srcdn.com/img1.jpg"],
     "source_name": "ScreenRant",
-    "domain": "maquinanerd.com.br",
+    "domain": "thefinance.news",
     "schema_original": {...}
 }
 ```
@@ -968,7 +968,7 @@ O `worker_loop()` mantém um contador de requisições por ciclo:
 2026-03-05 10:30:48 - INFO - pipeline - Processing article: Marvel Confirms... (DB ID: 42) from screenrant_movie_news
 2026-03-05 10:31:05 - INFO - pipeline - FEATURED OK: ID 567
 2026-03-05 10:31:30 - INFO - pipeline - PUBLICADO: Post 8901 | Marvel confirma novo filme dos Vingadores para 2027
-2026-03-05 10:31:30 - INFO - pipeline -   URL no WordPress: https://www.maquinanerd.com.br/?p=8901
+2026-03-05 10:31:30 - INFO - pipeline -   URL no WordPress: https://www.thefinance.news/?p=8901
 2026-03-05 10:31:30 - INFO - pipeline -   Categorias: {20, 24}
 2026-03-05 10:31:30 - INFO - pipeline -   Tags: ['Marvel', 'Vingadores', 'MCU', 'Cinema', 'Avengers']
 ```

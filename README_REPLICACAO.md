@@ -1,4 +1,4 @@
-# TheNerd-MN26 — Guia Completo de Replicação
+﻿# TheNEWS-Finance — Guia Completo de Replicação
 
 > Pipeline de autopublicação de conteúdo: RSS → Extração → IA (Gemini) → WordPress  
 > Versão documentada: `main` | Gerado automaticamente com base no código-fonte.
@@ -81,7 +81,7 @@ RSS/Sitemap  →  Extração Web  →  Reescrita por IA  →  Publicação WordP
 ## 3. Estrutura de Arquivos
 
 ```
-TheNerd-MN26/
+TheNEWS-Finance/
 │
 ├── main.py                      # Ponto de entrada: inicia o APScheduler
 ├── pyproject.toml               # Metadados do projeto Python
@@ -170,8 +170,8 @@ TheNerd-MN26/
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/maquinanerd/TheNerd-MN26.git
-cd TheNerd-MN26
+git clone https://github.com/TheFinance/TheNEWS-Finance.git
+cd TheNEWS-Finance
 
 # 2. Criar ambiente virtual
 python -m venv .venv
@@ -411,14 +411,14 @@ Os prompts de geração evergreen contêm menções diretas ao site atual. **Sub
 
 | O que alterar | Valor atual | Substitua por |
 |---|---|---|
-| Nome do site | `Máquina Nerd` | Nome do novo site |
-| Domínio | `maquinanerd.com.br` | Domínio do novo site |
-| Persona do redator | `redator especialista em cultura pop e entretenimento` | Persona adequada ao nicho |
+| Nome do site | `TheFinance` | Nome do novo site |
+| Domínio | `thefinance.news` | Domínio do novo site |
+| Persona do redator | `senior financial journalist e entretenimento` | Persona adequada ao nicho |
 | Tom editorial | referências a filmes/séries | Referências ao nicho do novo site |
 
 **Busque por:**
 ```bash
-grep -r "maquinanerd\|Máquina Nerd" app/evergreen_publisher.py
+grep -r "TheFinance\|TheFinance" app/evergreen_publisher.py
 ```
 
 Os 5 templates disponíveis são:
@@ -445,9 +445,9 @@ Este arquivo é o cérebro editorial do sistema. Contém:
 
 **O que substituir para outro site:**
 
-1. **Menções ao domínio**: busque `maquinanerd.com.br` e substitua pelo novo domínio
+1. **Menções ao domínio**: busque `thefinance.news` e substitua pelo novo domínio
 2. **Persona editorial**: altere a descrição do redator para o nicho do novo site
-3. **Estrutura "Nossa Análise"**: se o novo site não usar este bloco, remova ou renomeie
+3. **Estrutura "Our Analysis"**: se o novo site não usar este bloco, remova ou renomeie
 4. **Checklist final**: adapte as regras ao novo contexto editorial
 5. **Exemplos de H2/H3**: substitua pelos exemplos do nicho do novo site
 
@@ -458,7 +458,7 @@ Este arquivo é o cérebro editorial do sistema. Contém:
 A função `strip_ai_tag_links()` filtra links para o domínio atual:
 
 ```python
-def strip_ai_tag_links(html: str, domain: str = "maquinanerd.com.br") -> str:
+def strip_ai_tag_links(html: str, domain: str = "thefinance.news") -> str:
 ```
 
 Ela já aceita o `domain` como parâmetro, mas o default é hardcodado. Na pipeline, ela é chamada assim:
@@ -474,15 +474,15 @@ Altere o default para o novo domínio (ou deixe o wp_client passar corretamente)
 
 ### 6.6 `app/pipeline.py` — URLs hardcodadas
 
-Busque por `maquinanerd.com.br` no arquivo:
+Busque por `thefinance.news` no arquivo:
 
 ```bash
-grep -n "maquinanerd" app/pipeline.py
+grep -n "TheFinance" app/pipeline.py
 ```
 
 Você encontrará:
-1. `int_links = [a for a in ... if "maquinanerd.com.br" in a["href"]]` — no `assess_content_quality()`, linha ~97
-2. `url=f"https://www.maquinanerd.com.br/{slug}/"` — no link_store save, linha ~700
+1. `int_links = [a for a in ... if "thefinance.news" in a["href"]]` — no `assess_content_quality()`, linha ~97
+2. `url=f"https://www.thefinance.news/{slug}/"` — no link_store save, linha ~700
 
 **Substitua pelo domínio do novo site** em ambas as ocorrências, ou refatore para ler o domínio do `WORDPRESS_CONFIG`.
 
@@ -497,7 +497,7 @@ Você encontrará:
 - [ ] Editar `app/cluster_engine.py`: HIGH_VALUE_ENTITIES para o novo nicho
 - [ ] Editar `app/evergreen_publisher.py`: nome do site, domínio, persona, templates
 - [ ] Editar `universal_prompt.txt`: domínio, persona editorial, exemplos de H2/H3
-- [ ] Substituir `maquinanerd.com.br` em `html_utils.py` e `pipeline.py`
+- [ ] Substituir `thefinance.news` em `html_utils.py` e `pipeline.py`
 - [ ] Adicionar cleaners em `app/cleaners.py` para os novos sites de origem
 - [ ] Inicializar DB limpo: deletar `data/app.db` e rodar `python main.py --once`
 - [ ] Verificar primeiro artigo publicado manualmente no WP
@@ -576,7 +576,7 @@ worker_loop()  [pipeline.py — thread paralela em background]
         │   └── Insere até 6 links internos do link_store
         │
         ├── QA CAMADA 1 — assess_content_quality():
-        │   ├── Pontuação multicritério (palavras, H2/H3, links int., "Nossa Análise")
+        │   ├── Pontuação multicritério (palavras, H2/H3, links int., "Our Analysis")
         │   └── Score ≥ 45 → INDEX | Score < 45 → NOINDEX
         │
         ├── QA CAMADA 2 — semantic_qa_flash() [apenas score 35–49]:
@@ -663,11 +663,11 @@ Função: `assess_content_quality()` em `pipeline.py`
 | Presença de `<h2>` | 10 | Estrutura básica |
 | Links internos ≥ 2 | 20 | Boa linkagem |
 | Links internos ≥ 1 | 10 | Linkagem mínima |
-| Bloco "Nossa Análise" | 15 | Editorial próprio |
+| Bloco "Our Analysis" | 15 | Editorial próprio |
 
 **Score ≥ 45 → INDEX** | **Score < 45 → NOINDEX**
 
-> ⚠️ Se seu site não usa "Nossa Análise", ajuste o critério 7 para outro elemento editorial que você use.
+> ⚠️ Se seu site não usa "Our Analysis", ajuste o critério 7 para outro elemento editorial que você use.
 
 ### QA Camada 2 — Semântica (score borderline 35–49)
 
@@ -857,7 +857,7 @@ Get-Process python
 Get-Process python | Stop-Process
 
 # Reiniciar
-cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNerd-MN26"
+cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNEWS-Finance"
 .venv\Scripts\activate
 python main.py
 ```

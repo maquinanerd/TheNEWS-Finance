@@ -1,8 +1,8 @@
-# 🚀 Início Rápido - Depois da Reorganização
+﻿# 🚀 Início Rápido - Depois da Reorganização
 
 ## 📍 Você Está Aqui
 
-Seu projeto **The News Máquina Nerd** foi completamente reorganizado!
+Seu projeto **The News TheFinance** foi completamente reorganizado!
 
 ```
 ✅ 78 documentações em docs/
@@ -120,7 +120,7 @@ python scripts/find_json.py "seu termo aqui"
 
 ```bash
 # 1. Clonar ou ir para o diretório
-cd TheNews_MaquinaNerd
+cd TheNews_TheFinance
 
 # 2. Criar ambiente virtual (se não existir)
 python -m venv venv
@@ -148,7 +148,7 @@ python dashboard.py
 ## 📋 Estrutura em Alto Nível
 
 ```
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 ├── 📄 README_PROJETO.md          ← COMECE AQUI
 ├── 🐍 main.py                    (Execute isto)
 ├── 🌐 dashboard.py               (Interface web)

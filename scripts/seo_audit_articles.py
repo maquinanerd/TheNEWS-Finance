@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 SEO Audit Crawler - Análise completa de SEO dos artigos
 Focado em posts/artigos apenas
@@ -13,7 +13,7 @@ from datetime import datetime
 from collections import defaultdict
 import sys
 
-SITE_URL = "https://www.maquinanerd.com.br"
+SITE_URL = "https://www.thefinance.news"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }

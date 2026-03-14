@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 # Prompts de geração — um por template
 # ---------------------------------------------------------------------------
 EVERGREEN_PROMPTS = {
-    "timeline": """Você é editor do Máquina Nerd (maquinanerd.com.br).
+    "timeline": """Você é editor do TheFinance (thefinance.news).
 Crie artigo completo de 900-1.200 palavras em português brasileiro:
 "{entity} — Timeline Completa e Ordem Cronológica Explicada"
 
@@ -29,7 +29,7 @@ ESTRUTURA OBRIGATÓRIA:
 Mínimo 900 palavras. Cada <h2> DEVE ter pelo menos um <h3> filho.
 Retorne APENAS o HTML do corpo do artigo (sem <html>, <head> ou <body>).""",
 
-    "cast_guide": """Você é editor do Máquina Nerd (maquinanerd.com.br).
+    "cast_guide": """Você é editor do TheFinance (thefinance.news).
 Crie artigo guia de 900-1.200 palavras em português brasileiro:
 "{entity} — Elenco Completo e Guia de Personagens"
 
@@ -41,7 +41,7 @@ ESTRUTURA OBRIGATÓRIA:
 Mínimo 900 palavras. Cada <h2> DEVE ter pelo menos um <h3> filho.
 Retorne APENAS o HTML do corpo do artigo (sem <html>, <head> ou <body>).""",
 
-    "villains": """Você é editor do Máquina Nerd (maquinanerd.com.br).
+    "villains": """Você é editor do TheFinance (thefinance.news).
 Crie artigo de 900-1.200 palavras em português brasileiro:
 "{entity} — Todos os Vilões Explicados e Ranqueados"
 
@@ -53,7 +53,7 @@ ESTRUTURA OBRIGATÓRIA:
 Mínimo 900 palavras. Cada <h2> DEVE ter pelo menos um <h3> filho.
 Retorne APENAS o HTML do corpo do artigo (sem <html>, <head> ou <body>).""",
 
-    "ending_explained": """Você é editor do Máquina Nerd (maquinanerd.com.br).
+    "ending_explained": """Você é editor do TheFinance (thefinance.news).
 Crie artigo de 900-1.200 palavras em português brasileiro:
 "{entity} — Final Explicado em Detalhes"
 
@@ -65,7 +65,7 @@ ESTRUTURA OBRIGATÓRIA:
 Mínimo 900 palavras. Cada <h2> DEVE ter pelo menos um <h3> filho.
 Retorne APENAS o HTML do corpo do artigo (sem <html>, <head> ou <body>).""",
 
-    "easter_eggs": """Você é editor do Máquina Nerd (maquinanerd.com.br).
+    "easter_eggs": """Você é editor do TheFinance (thefinance.news).
 Crie artigo de 900-1.200 palavras em português brasileiro:
 "{entity} — Todos os Easter Eggs e Referências Escondidas"
 

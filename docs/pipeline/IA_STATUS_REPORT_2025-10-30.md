@@ -1,4 +1,4 @@
-# 🤖 Status das IAs em 2025-10-30 - Relatório Detalhado
+﻿# 🤖 Status das IAs em 2025-10-30 - Relatório Detalhado
 
 ## 📋 Resumo Executivo
 **Status Geral**: ⚠️ **OPERACIONAL COM PROBLEMAS** (87% de sucesso)
@@ -219,5 +219,5 @@ O sistema funcionou com **87% de eficiência** em 2025-10-30, publicando ~344 ar
 ---
 
 **Data**: 31 de outubro de 2025  
-**Sistema**: TheNews Máquina Nerd - Processador AI  
+**Sistema**: TheNews TheFinance - Processador AI  
 **Status**: ✅ Operacional | ⚠️ Otimização em andamento

@@ -1,4 +1,4 @@
-# 🎉 Reorganização Completa - Resumo Final
+﻿# 🎉 Reorganização Completa - Resumo Final
 
 **Data:** 6 de Fevereiro de 2026  
 **Status:** ✅ **100% CONCLUÍDO**  
@@ -25,7 +25,7 @@
 ## 📁 Nova Estrutura
 
 ```
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 ├── 📄 README.md                    (Padrão, mantido)
 ├── 📄 README_PROJETO.md            (🆕 Guia Principal)
 ├── 📄 LEIA-ME-PRIMEIRO.md          (Status)
@@ -363,6 +363,6 @@ Seu projeto está **100% organizado e pronto para produção**.
 **Data:** 6 de Fevereiro de 2026  
 **Versão:** 1.0  
 **Status:** ✅ Completo  
-**Desenvolvido para:** The News Máquina Nerd
+**Desenvolvido para:** The News TheFinance
 
 *Última atualização: 6/02/2026*

@@ -1,4 +1,4 @@
-# 🚀 IMPLEMENTAÇÃO FINAL: 5 CAMADAS DE NUCLEAR CTA REMOVAL
+﻿# 🚀 IMPLEMENTAÇÃO FINAL: 5 CAMADAS DE NUCLEAR CTA REMOVAL
 
 ## ✅ ESTADO FINAL - TUDO IMPLEMENTADO E TESTADO
 
@@ -226,7 +226,7 @@ wp_post_id = wp_client.create_post(post_payload)
 
 ### Teste Nuclear
 ```bash
-cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_MaquinaNerd"
+cd "e:\Área de Trabalho 2\Portal The News\Nerd\TheNews_TheFinance"
 python test_nuclear_cta_removal.py
 ```
 

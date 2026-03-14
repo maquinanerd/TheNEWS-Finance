@@ -1,4 +1,4 @@
-# Crawl Budget — Quality Score & Lógica noindex
+﻿# Crawl Budget — Quality Score & Lógica noindex
 
 **Implementado em:** 12/03/2026  
 **Arquivos alterados:** `app/pipeline.py`, `app/wordpress.py`  
@@ -10,7 +10,7 @@
 
 ### O problema real: Crawl Budget
 
-O Google não indexa tudo. Todo site tem um **crawl budget** — um número limitado de páginas que o Googlebot visita e indexa por dia. Para o maquinanerd.com.br isso importa porque:
+O Google não indexa tudo. Todo site tem um **crawl budget** — um número limitado de páginas que o Googlebot visita e indexa por dia. Para o thefinance.news isso importa porque:
 
 - O pipeline publica múltiplos artigos por dia automaticamente.
 - Artigos curtos, sem estrutura, sem links internos **desperdiçam crawl budget**.
@@ -33,7 +33,7 @@ O Google não usa contagem de palavras para definir qualidade. Uma notícia de 4
 |---|---|
 | 500 palavras = INDEX | Analisa estrutura H2/H3 |
 | 499 palavras = NOINDEX | Analisa links internos que distribuem PageRank |
-| Ignora formatação | Detecta bloco "Nossa Análise" |
+| Ignora formatação | Detecta bloco "Our Analysis" |
 | Ignora links | Threshold ajustável |
 
 O threshold de 500 palavras é uma regra de bolso pragmática, não uma diretriz do Google. O score multifatorial reflete melhor o que o Google considera conteúdo de qualidade.
@@ -66,12 +66,12 @@ def assess_content_quality(content_html: str) -> dict:
 
     # 3. Links internos (distribuem PageRank, ajudam cluster)
     int_links = [a for a in soup.find_all("a", href=True)
-                 if "maquinanerd.com.br" in a["href"]]
+                 if "thefinance.news" in a["href"]]
     if   len(int_links) >= 2: score += 20
     elif len(int_links) >= 1: score += 10
 
-    # 4. Bloco editorial "Nossa Análise" (do novo prompt)
-    if "nossa análise" in text.lower(): score += 15
+    # 4. Bloco editorial "Our Analysis" (do novo prompt)
+    if "Our Analysis" in text.lower(): score += 15
 
     should_index = score >= 45
     reason = (
@@ -90,31 +90,31 @@ def assess_content_quality(content_html: str) -> dict:
 | **Palavras** | >= 400 palavras (mas < 600) | +15 |
 | **Estrutura** | Tem `<h3>` | +20 |
 | **Estrutura** | Tem `<h2>` | +10 |
-| **Links internos** | >= 2 links para maquinanerd.com.br | +20 |
-| **Links internos** | 1 link para maquinanerd.com.br | +10 |
-| **Editorial** | Contém "nossa análise" (case-insensitive) | +15 |
+| **Links internos** | >= 2 links para thefinance.news | +20 |
+| **Links internos** | 1 link para thefinance.news | +10 |
+| **Editorial** | Contém "Our Analysis" (case-insensitive) | +15 |
 
 **Threshold:** `score >= 45` → INDEX. `score < 45` → NOINDEX.
 
 ### Pontuação máxima possível: 95 pontos
 
-Um artigo perfeito teria: 600+ palavras (+30) + H3 (+20) + H2 (+10) + 2+ links internos (+20) + "Nossa Análise" (+15) = **95 pontos**.
+Um artigo perfeito teria: 600+ palavras (+30) + H3 (+20) + H2 (+10) + 2+ links internos (+20) + "Our Analysis" (+15) = **95 pontos**.
 
 ### Exemplos práticos
 
 | Conteúdo | Pontos | Decisão |
 |---|---|---|
-| 650w + H2 + H3 + 2 links + "Nossa Análise" | 30+10+20+20+15 = **95** | INDEX ✅ |
+| 650w + H2 + H3 + 2 links + "Our Analysis" | 30+10+20+20+15 = **95** | INDEX ✅ |
 | 620w + H2 + H3 + 1 link | 30+10+20+10 = **70** | INDEX ✅ |
 | 450w + H3 + 2 links | 15+20+20 = **55** | INDEX ✅ |
 | 420w + H2 | 15+10 = **25** | NOINDEX ❌ |
 | 300w sem estrutura | 0 = **0** | NOINDEX ❌ |
-| 300w + 2 links + "Nossa Análise" | 0+20+15 = **35** | NOINDEX ❌ |
-| 400w + 2 links + "Nossa Análise" | 15+20+15 = **50** | INDEX ✅ |
+| 300w + 2 links + "Our Analysis" | 0+20+15 = **35** | NOINDEX ❌ |
+| 400w + 2 links + "Our Analysis" | 15+20+15 = **50** | INDEX ✅ |
 
 ### Por que o threshold é 45 e não 50?
 
-45 foi escolhido porque permite que artigos menores mas **bem estruturados** (links internos + bloco editorial) sejam indexados. Um artigo de notícia rápida de 400 palavras com 2 links internos e "Nossa Análise" marca 50 pontos — suficiente para passar. Isso é filosoficamente correto: o artigo está **conectado à rede interna do site** e tem análise própria.
+45 foi escolhido porque permite que artigos menores mas **bem estruturados** (links internos + bloco editorial) sejam indexados. Um artigo de notícia rápida de 400 palavras com 2 links internos e "Our Analysis" marca 50 pontos — suficiente para passar. Isso é filosoficamente correto: o artigo está **conectado à rede interna do site** e tem análise própria.
 
 ---
 
@@ -346,7 +346,7 @@ from bs4 import BeautifulSoup
 A função `assess_content_quality` usa `BeautifulSoup` para parsear o HTML e extrair:
 - Texto limpo (`.get_text()`) → contagem de palavras
 - Tags `<h2>` e `<h3>` → estrutura hierárquica
-- Tags `<a href>` com domínio `maquinanerd.com.br` → links internos
+- Tags `<a href>` com domínio `thefinance.news` → links internos
 
 ---
 
@@ -418,7 +418,7 @@ Para retroativamente aplicar o QA nos artigos existentes, seria necessário um s
     ↓
 [detect_forbidden_cta() — 4 camadas de verificação]
     ↓
-[add_internal_links() — injeta links para maquinanerd.com.br]
+[add_internal_links() — injeta links para thefinance.news]
     ↓
 [assess_content_quality(content_html)]  ← NOVO
     │

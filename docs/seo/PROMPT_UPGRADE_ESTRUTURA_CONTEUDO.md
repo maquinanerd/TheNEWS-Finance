@@ -1,4 +1,4 @@
-# 13 — Upgrade do Prompt Universal · Estrutura de Conteúdo
+﻿# 13 — Upgrade do Prompt Universal · Estrutura de Conteúdo
 
 **Implementado em:** 12/03/2026  
 **Arquivo alterado:** `universal_prompt.txt` (raiz do projeto)  
@@ -62,7 +62,7 @@ Foi substituída por:
 
 ```
 □ Primeiro H2 é "O que você precisa saber"? Se não, REFAZER.
-□ Último H2 é "Nossa Análise"? Se não, REFAZER.
+□ Último H2 é "Our Analysis"? Se não, REFAZER.
 □ Cada H2 tem pelo menos um H3 filho? Se não, ADICIONAR.
 □ Máximo 6 tags <h2>? Se mais, REMOVER.
 ```
@@ -94,7 +94,7 @@ ESTRUTURA OBRIGATÓRIA DO ARTIGO:
      <li>[O que esperar a seguir]</li>
    </ul>
 3. [2-4 H2s de desenvolvimento, cada um com H3s filhos]
-4. <h2>Nossa Análise</h2>  ← SEMPRE o último H2
+4. <h2>Our Analysis</h2>  ← SEMPRE o último H2
    Um parágrafo com perspectiva editorial única. Use voz ativa.
    Conecte com outras obras/franquias do mesmo universo.
 
@@ -102,7 +102,7 @@ PROIBIDO:
 - Mais de 6 tags <h2>
 - Sequência de <h2> sem <h3> intercalado
 - Ausência do bloco "O que você precisa saber"
-- Ausência da seção "Nossa Análise"
+- Ausência da seção "Our Analysis"
 ---
 ```
 
@@ -117,7 +117,7 @@ Cada regra adicionada ao prompt mapeia diretamente um fator do `assess_content_q
 | Mínimo 700 palavras | `words >= 600` | **+30** |
 | `<h3>` obrigatório dentro de cada `<h2>` | `soup.find("h3")` | **+20** |
 | `<h2>` obrigatório (estrutura) | `soup.find("h2")` | **+10** |
-| Seção "Nossa Análise" obrigatória | `"nossa análise" in text.lower()` | **+15** |
+| Seção "Our Analysis" obrigatória | `"Our Analysis" in text.lower()` | **+15** |
 | **Total de pontos garantidos** | | **+75** |
 
 Com 75 pontos garantidos pelas regras do prompt (sem contar links internos), **todos os artigos vão superar o threshold de 45** e receber INDEX.
@@ -170,7 +170,7 @@ Taxa de INDEX esperada: **~90%+**
 <h3>Subtópico específico C</h3>
 <p>Conteúdo...</p>
 
-<h2>Nossa Análise</h2>
+<h2>Our Analysis</h2>
 <p>Perspectiva editorial única em voz ativa. Conexão com outras obras/franquias.</p>
 ```
 
@@ -186,13 +186,13 @@ Taxa de INDEX esperada: **~90%+**
 
 ---
 
-## 9. Por que "Nossa Análise" é estratégico além do score
+## 9. Por que "Our Analysis" é estratégico além do score
 
-A seção "Nossa Análise" é o único campo do artigo com **voz editorial própria** — diferente do texto noticioso neutro. Isso serve a três objetivos simultâneos:
+A seção "Our Analysis" é o único campo do artigo com **voz editorial própria** — diferente do texto noticioso neutro. Isso serve a três objetivos simultâneos:
 
 1. **Quality Score:** +15 pontos automáticos
 2. **E-E-A-T (Google):** Demonstra experiência e expertise — fatores de ranqueamento
-3. **Diferenciação:** Artigos do maquinanerd.com.br não são apenas repasse de notícia — têm perspectiva própria, o que reduz o risco de tratamento como conteúdo duplicado
+3. **Diferenciação:** Artigos do thefinance.news não são apenas repasse de notícia — têm perspectiva própria, o que reduz o risco de tratamento como conteúdo duplicado
 
 ---
 
@@ -205,8 +205,8 @@ Após os próximos artigos serem publicados, execute:
 Get-Content logs\app.log | Where-Object { $_ -match "\[QA\]" }
 
 # Verificar estrutura HTML do artigo publicado
-# Abrir a URL do post no browser → Ctrl+U → Ctrl+F → "Nossa Análise"
-# Deve aparecer: <h2>Nossa Análise</h2>
+# Abrir a URL do post no browser → Ctrl+U → Ctrl+F → "Our Analysis"
+# Deve aparecer: <h2>Our Analysis</h2>
 ```
 
 **Resultado esperado nos logs:**
@@ -229,7 +229,7 @@ O checklist de validação do prompt foi atualizado para ser consistente com as 
 | Antes | Depois |
 |---|---|
 | `□ Mínimo 3 subtítulos <h2>? Se menos, ADICIONAR.` | `□ Primeiro H2 é "O que você precisa saber"? Se não, REFAZER.` |
-| | `□ Último H2 é "Nossa Análise"? Se não, REFAZER.` |
+| | `□ Último H2 é "Our Analysis"? Se não, REFAZER.` |
 | | `□ Cada H2 tem pelo menos um H3 filho? Se não, ADICIONAR.` |
 | | `□ Máximo 6 tags <h2>? Se mais, REMOVER.` |
 

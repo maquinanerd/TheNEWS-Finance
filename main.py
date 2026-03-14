@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
-Ponto de entrada do pipeline de conteúdo MaquinaNerd.
+Ponto de entrada do pipeline de conteúdo TheFinance.
 """
 
 if __name__ == "__main__":

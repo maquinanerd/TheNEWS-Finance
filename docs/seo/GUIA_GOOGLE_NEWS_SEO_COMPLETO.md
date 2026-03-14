@@ -1,4 +1,4 @@
-# 🎯 GOOGLE NEWS SEO - GUIA COMPLETO DE CONFIGURAÇÃO
+﻿# 🎯 GOOGLE NEWS SEO - GUIA COMPLETO DE CONFIGURAÇÃO
 
 ## 📋 CHECKLIST DE IMPLEMENTAÇÃO
 
@@ -15,7 +15,7 @@
 
 1. **Acessar WordPress Dashboard**
    ```
-   https://www.maquinanerd.com.br/wp-admin
+   https://www.thefinance.news/wp-admin
    ```
 
 2. **Instalar Plugin WPCode** (se não tiver)
@@ -50,7 +50,7 @@
 
 8. **Verificar News-Sitemap.xml**
    ```
-   https://www.maquinanerd.com.br/news-sitemap.xml
+   https://www.thefinance.news/news-sitemap.xml
    ```
    
    Deve conter NOVAS linhas como:
@@ -73,14 +73,14 @@
    ```
    https://tool.toolip.io/find/xml-sitemap-validator
    ```
-   - Colar URL: `https://www.maquinanerd.com.br/news-sitemap.xml`
+   - Colar URL: `https://www.thefinance.news/news-sitemap.xml`
    - Validar
 
 2. **Google Rich Results Test**
    ```
    https://search.google.com/test/rich-results
    ```
-   - Copiar URL de um post: `https://www.maquinanerd.com.br/spider-noir-cat-hardy-interesse-amoroso/`
+   - Copiar URL de um post: `https://www.thefinance.news/spider-noir-cat-hardy-interesse-amoroso/`
    - Verificar structured data
 
 3. **XML Validator**
@@ -103,8 +103,8 @@ https://newscenter.google.com/
 1. **Login com Gmail/Google Account**
 2. **Adicionar Publicação**
    - Clique em "+" 
-   - Nome: `Máquina Nerd`
-   - URL: `https://www.maquinanerd.com.br`
+   - Nome: `TheFinance`
+   - URL: `https://www.thefinance.news`
    - Categoria: Entertainment/Movies/TV
    - Idioma: Portuguese
 
@@ -131,7 +131,7 @@ https://newscenter.google.com/
 #### 4.3 Configurar News-Sitemap
 1. Em News Publisher Center:
    - Seção: "Sitemaps"
-   - URL: `https://www.maquinanerd.com.br/news-sitemap.xml`
+   - URL: `https://www.thefinance.news/news-sitemap.xml`
    - "Submit"
 
 #### 4.4 Configurações Recomendadas
@@ -158,18 +158,18 @@ https://search.google.com/search-console/
 ```
 
 1. **Nova Property**
-   - URL: `https://www.maquinanerd.com.br`
+   - URL: `https://www.thefinance.news`
    - Tipo: Domain ou URL prefix
    - Verificar propriedade (DNS é melhor)
 
 2. **Submeter Sitemap**
    - Left menu → Sitemaps
-   - URL: `https://www.maquinanerd.com.br/sitemap_index.xml`
+   - URL: `https://www.thefinance.news/sitemap_index.xml`
    - Submit
 
 3. **Submeter News Sitemap**
    - Left menu → Sitemaps
-   - URL: `https://www.maquinanerd.com.br/news-sitemap.xml`
+   - URL: `https://www.thefinance.news/news-sitemap.xml`
    - Submit (especificamente para news)
 
 ### 5.2 Monitorar Performance
@@ -387,7 +387,7 @@ def validate_news_sitemap(url):
 - Mais referral traffic via Google News
 
 **Timeframe: 1-3 meses**
-- Máquina Nerd pode virar "news source" oficial
+- TheFinance pode virar "news source" oficial
 - Maior autoridade em notícias de séries/filmes
 - Potencial para featured snippets
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Script para verificar as categorias disponíveis no WordPress
 e corrigir o mapeamento de "Séries"
@@ -8,7 +8,7 @@ import requests
 from typing import List, Dict
 
 # Configuração
-WP_SITE_URL = "https://www.maquinanerd.com.br"
+WP_SITE_URL = "https://www.thefinance.news"
 WP_API_URL = f"{WP_SITE_URL}/wp-json/wp/v2/categories"
 
 def get_all_categories() -> List[Dict]:

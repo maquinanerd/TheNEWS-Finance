@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Buscar artigos não publicados e tentar enviar novamente
 para isolar qual conteúdo está causando erro 500
@@ -16,7 +16,7 @@ load_dotenv()
 
 user = os.getenv('WORDPRESS_USER')
 password = os.getenv('WORDPRESS_PASSWORD')
-url = 'https://www.maquinanerd.com.br/wp-json/wp/v2/posts'
+url = 'https://www.thefinance.news/wp-json/wp/v2/posts'
 
 print("=" * 80)
 print("ISOLAMENTO: Testar conteúdo real de artigos não publicados")

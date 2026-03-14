@@ -578,12 +578,12 @@ def downgrade_h1_to_h2(html: str) -> str:
     return html
 
 
-def strip_ai_tag_links(html: str, domain: str = "maquinanerd.com.br") -> str:
+def strip_ai_tag_links(html: str, domain: str = "thefinance.news") -> str:
     """
     Removes <a href> links invented by the AI that point to /tag/ pages.
     Keeps the anchor text, removes the link wrapper.
     This prevents publishing links to tag archives that may not exist.
-    Example: <a href="https://maquinanerd.com.br/tag/the-boys">The Boys</a>
+    Example: <a href="https://thefinance.news/tag/bitcoin">Bitcoin</a>
              → The Boys
     """
     if not html or "/tag/" not in html:
@@ -618,7 +618,7 @@ def remove_source_domain_schemas(html: str) -> str:
     Remove todos os blocos JSON-LD que vieram do conteúdo original da fonte.
     
     O WordPress injeta automaticamente os schemas corretos com o domínio 
-    maquinanerd.com.br via WPCode ou plugins. Remover os schemas originais 
+    thefinance.news via WPCode ou plugins. Remover os schemas originais 
     evita conflitos de Schema.org e problemas de SEO/Google News.
     
     Remove:

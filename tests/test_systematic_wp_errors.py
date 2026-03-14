@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Teste sistemático para encontrar qual parte do conteúdo causa erro 500"""
 
 import requests
@@ -12,7 +12,7 @@ load_dotenv()
 
 user = os.getenv('WORDPRESS_USER')
 password = os.getenv('WORDPRESS_PASSWORD')
-url = 'https://www.maquinanerd.com.br/wp-json/wp/v2/posts'
+url = 'https://www.thefinance.news/wp-json/wp/v2/posts'
 
 print("=" * 80)
 print("TESTE SISTEMÁTICO: Encontrar causa do erro 500")

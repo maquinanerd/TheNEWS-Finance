@@ -1,6 +1,6 @@
-╔════════════════════════════════════════════════════════════════════════════╗
+﻿╔════════════════════════════════════════════════════════════════════════════╗
 ║                          ORGANIZAÇÃO FINALIZADA                            ║
-║                      TheNews Máquina Nerd v1.0                            ║
+║                      TheNews TheFinance v1.0                            ║
 ║                      6 de Fevereiro de 2026                               ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
@@ -40,7 +40,7 @@ Espaço Liberado: 2.5 MB
 📁 ESTRUTURA FINAL
 ═══════════════════════════════════════════════════════════════════════════
 
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 │
 ├─ 📄 README.md
 ├─ 📄 README_PROJETO.md ..................... ⭐ COMECE AQUI
@@ -250,7 +250,7 @@ Status: ✅ 100% PRONTO PARA PRODUÇÃO
 
 Data: 6 de Fevereiro de 2026
 Versão: 1.0
-Desenvolvido para: The News Máquina Nerd
+Desenvolvido para: The News TheFinance
 Status: ✅ COMPLETO
 
 PARABÉNS! Seu projeto está 100% organizado! 🎉

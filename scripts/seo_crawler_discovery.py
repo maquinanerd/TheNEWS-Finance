@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-SEO Crawler Discovery - Reconhecimento do site maquinanerd.com.br
+SEO Crawler Discovery - Reconhecimento do site thefinance.news
 Descobre quantas páginas existem e estima tempo de análise completa.
 """
 
@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import time
 from collections import defaultdict
 
-SITE_URL = "https://maquinanerd.com.br"
+SITE_URL = "https://thefinance.news"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }
@@ -175,7 +175,7 @@ def print_report(visited, pages_by_type):
                 print(f"  ... e mais {len(pages_by_type[page_type]) - 3}")
 
 def main():
-    print("\n🚀 DESCOBERTA DE PÁGINAS - maquinanerd.com.br\n")
+    print("\n🚀 DESCOBERTA DE PÁGINAS - thefinance.news\n")
     
     start_time = time.time()
     

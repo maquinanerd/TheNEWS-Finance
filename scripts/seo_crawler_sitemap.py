@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 SEO Crawler - Extrai URLs do sitemap.xml
 Muito mais rápido que crawling tradicional
@@ -8,7 +8,7 @@ import requests
 from xml.etree import ElementTree as ET
 import time
 
-SITE_URL = "https://maquinanerd.com.br"
+SITE_URL = "https://thefinance.news"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }

@@ -1,4 +1,4 @@
-╔════════════════════════════════════════════════════════════════════════════════════╗
+﻿╔════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                    ║
 ║              ✅ CERTIFICAÇÃO - SISTEMA DE RASTREAMENTO DE TOKENS                    ║
 ║                           100% OPERACIONAL E ÍNTEGRO                               ║
@@ -281,6 +281,6 @@ OS TOKENS DE SAIDA E ENTRADA, É OBRIGATÓRIO"
 
 
 Assinado digitalmente em: 2026-02-11 15:37:41 UTC
-Sistema: TheNews_MaquinaNerd v1.0
+Sistema: TheNews_TheFinance v1.0
 Status: CERTIFICADO E OPERACIONAL
 Próxima revisão: Diária (automática via dashboard)

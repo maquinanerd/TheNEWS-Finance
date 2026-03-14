@@ -1,4 +1,4 @@
-# CHANGELOG — Sprint SEO Indexação
+﻿# CHANGELOG — Sprint SEO Indexação
 
 **Data:** 12/03/2026  
 **Base:** commit `529feb7`  
@@ -34,8 +34,8 @@ Avalia estrutura do artigo gerado **antes de publicar** e decide se deve ser ind
 |---|---|
 | ≥ 700 palavras | +30 |
 | ≥ 1 tag `<h3>` | +20 |
-| Seção "Nossa Análise" presente | +15 |
-| ≥ 2 links internos (`maquinanerd.com.br`) | +20 |
+| Seção "Our Analysis" presente | +15 |
+| ≥ 2 links internos (`thefinance.news`) | +20 |
 | Sem CTA residual detectado | +15 |
 
 - Score ≥ 50 → `noindex=0` (INDEX)
@@ -59,11 +59,11 @@ Avalia estrutura do artigo gerado **antes de publicar** e decide se deve ser ind
    - Mínimo 700 palavras (notícia) / 1.000 (análise)
    - Máximo 6 `<h2>`, cada um com pelo menos um `<h3>` filho
    - Primeiro H2 fixo: "O que você precisa saber" com `<ul>` de 3 pontos
-   - Último H2 fixo: "Nossa Análise" com perspectiva editorial
+   - Último H2 fixo: "Our Analysis" com perspectiva editorial
 
 2. **CHECKLIST FINAL** atualizado — 4 itens específicos substituem o genérico "Mínimo 3 subtítulos H2":
    - `□ Primeiro H2 é "O que você precisa saber"?`
-   - `□ Último H2 é "Nossa Análise"?`
+   - `□ Último H2 é "Our Analysis"?`
    - `□ Cada H2 tem pelo menos um H3 filho?`
    - `□ Máximo 6 tags <h2>?`
 

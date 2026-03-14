@@ -1,4 +1,4 @@
-🚀 SISTEMA REORGANIZADO E PRONTO PARA USAR
+﻿🚀 SISTEMA REORGANIZADO E PRONTO PARA USAR
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -92,14 +92,14 @@ logs/
     └── tokens_2026-02-05.jsonl  ← Todos os registros com slug + wp_post_id
 
 WordPress:
-└── Posts com ID, slug, e URL na Máquina Nerd
+└── Posts com ID, slug, e URL na TheFinance
 
 ═══════════════════════════════════════════════════════════════════════════════
 
 🔍 EXEMPLO PRÁTICO:
 
 Você vê a URL publicada:
-https://www.maquinanerd.com.br/jogos-olimpicos-inverno-2026-filmes-series/
+https://www.thefinance.news/jogos-olimpicos-inverno-2026-filmes-series/
 
 Quer encontrar o JSON:
 $ python find_json.py "jogos-olimpicos-inverno"

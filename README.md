@@ -50,7 +50,7 @@ python main.py
 ## Project Structure
 
 ```
-TheNerd-MN26/
+TheNEWS-Finance/
 ├── app/              # Core application modules
 │   ├── pipeline.py   # Main pipeline orchestration
 │   ├── rewriter.py   # AI content processing

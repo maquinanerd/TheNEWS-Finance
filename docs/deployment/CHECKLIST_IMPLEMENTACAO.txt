@@ -1,4 +1,4 @@
-✅ CHECKLIST DE IMPLEMENTAÇÃO
+﻿✅ CHECKLIST DE IMPLEMENTAÇÃO
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -128,7 +128,7 @@ WordPress:
 
 EXEMPLO DE RASTREAMENTO COMPLETO:
 
-User vê URL: https://www.maquinanerd.com.br/jogos-olimpicos-inverno-2026-filmes-series/
+User vê URL: https://www.thefinance.news/jogos-olimpicos-inverno-2026-filmes-series/
 
 1. Encontrar JSON:
    $ python find_json.py "olimpicos"
@@ -143,7 +143,7 @@ User vê URL: https://www.maquinanerd.com.br/jogos-olimpicos-inverno-2026-filmes
    ✅ Mostra prompt_tokens, completion_tokens, wp_post_id
 
 4. Acessar WordPress:
-   https://www.maquinanerd.com.br/?p=71064
+   https://www.thefinance.news/?p=71064
    ✅ Post publicado com ID 71064
 
 TUDO RASTREÁVEL! 🎉

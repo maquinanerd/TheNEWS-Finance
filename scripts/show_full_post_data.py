@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Script definitivo: MOSTRA TUDO sobre o último post processado.
 Entrada, saída, tokens, link de origem, link publicado, tudo!
@@ -113,7 +113,7 @@ def main():
                 wp_id = pub_record.get('wp_post_id')
                 print(f"  ✅ PUBLICADO NO WORDPRESS:")
                 print(f"     - ID WordPress:     {wp_id}")
-                print(f"     - URL publicada:    https://www.maquinanerd.com.br/?p={wp_id}")
+                print(f"     - URL publicada:    https://www.thefinance.news/?p={wp_id}")
                 break
         
         print()
@@ -133,7 +133,7 @@ def main():
             print(f"  📌 Título:              {article_title}")
             print(f"  📥 Link de Origem:      {source_url}")
             print(f"  🆔 ID WordPress:        {wp_id}")
-            print(f"  🔗 URL Publicada:       https://www.maquinanerd.com.br/?p={wp_id}")
+            print(f"  🔗 URL Publicada:       https://www.thefinance.news/?p={wp_id}")
             print()
     
     # Resumo de tokens

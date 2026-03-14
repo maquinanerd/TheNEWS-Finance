@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Ativar WP_DEBUG no WordPress via SSH/FTP ou direto no wp-config.php"""
 
 import requests
@@ -26,7 +26,7 @@ payload = {
     'categories': [20],
 }
 
-url = 'https://www.maquinanerd.com.br/wp-json/wp/v2/posts'
+url = 'https://www.thefinance.news/wp-json/wp/v2/posts'
 
 try:
     response = requests.post(url, auth=HTTPBasicAuth(user, password), json=payload, timeout=30)

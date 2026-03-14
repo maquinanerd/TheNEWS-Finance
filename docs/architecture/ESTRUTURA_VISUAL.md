@@ -1,9 +1,9 @@
-# 📊 Estrutura Visual Completa
+﻿# 📊 Estrutura Visual Completa
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
-║         🎉 TheNews Máquina Nerd - Projeto 100% Organizado! 🎉            ║
+║         🎉 TheNews TheFinance - Projeto 100% Organizado! 🎉            ║
 ║                                                                            ║
 ║                         Versão 1.0 | 6 de Fevereiro de 2026              ║
 ║                   Status: ✅ Pronto para Produção                         ║
@@ -14,7 +14,7 @@
 📦 ESTRUTURA DE PASTAS
 ═══════════════════════════════════════════════════════════════════════════
 
-TheNews_MaquinaNerd/
+TheNews_TheFinance/
 │
 ├─ 📄 README.md                       ← README padrão
 ├─ 📄 README_PROJETO.md               ← ⭐ COMECE AQUI
@@ -362,7 +362,7 @@ Python-dateutil 2.9.0+        | python-dotenv 1.1.1+
 
 ═══════════════════════════════════════════════════════════════════════════
 
-Desenvolvido para The News Máquina Nerd
+Desenvolvido para The News TheFinance
 Data: 6 de Fevereiro de 2026
 Versão: 1.0
 Status: ✅ PRONTO PARA PRODUÇÃO
